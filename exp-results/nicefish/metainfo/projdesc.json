@@ -1,0 +1,931 @@
+{
+  "name": "nicefish",
+  "apis": [
+    {
+      "name": "com.nicefish.cms.controller.PostController.getPostList",
+      "def_req": "Integer page, Integer rows, HttpServletRequest request\n",
+      "def_resp": "Page<PostEntity>\n\n\nclass PostEntity {\n    Integer postId;\n    String thumbImgUrl;\n    String headerImgUrl;\n    String title;\n    Date postTime;\n    String content;\n    String summary;\n    String originalURL;\n    String postType;\n    Date updateTime;\n    Integer readTimes;\n    Integer likedTimes;\n    Integer commentTimes;\n    Integer userId;\n    String email;\n    String nickName;\n    String enableComment;\n    Integer status;\n    List<FileUploadEntity> fileUploadEntities;\n}\n\nclass FileUploadEntity {\n    Integer id;\n    String fileName;\n    String displayName;\n    String fileSuffix;\n    Long fileSize;\n    String path;\n    String url;\n    String fileDesc;\n    Integer displayOrder;\n    Date upTime;\n    Integer userId;\n    PostEntity postEntity;\n}",
+      "src": null,
+      "argument_names": [
+        "page",
+        "rows",
+        "request"
+      ],
+      "controller_path": "com.nicefish.cms.controller.PostController.getPostList",
+      "url_path": "/nicefish/cms/post/post-list/{page}/{rows}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.PostController.getPostDetail",
+      "def_req": "Integer postId\n",
+      "def_resp": "PostEntity\n\n\nclass PostEntity {\n    Integer postId;\n    String thumbImgUrl;\n    String headerImgUrl;\n    String title;\n    Date postTime;\n    String content;\n    String summary;\n    String originalURL;\n    String postType;\n    Date updateTime;\n    Integer readTimes;\n    Integer likedTimes;\n    Integer commentTimes;\n    Integer userId;\n    String email;\n    String nickName;\n    String enableComment;\n    Integer status;\n    List<FileUploadEntity> fileUploadEntities;\n}\n\nclass FileUploadEntity {\n    Integer id;\n    String fileName;\n    String displayName;\n    String fileSuffix;\n    Long fileSize;\n    String path;\n    String url;\n    String fileDesc;\n    Integer displayOrder;\n    Date upTime;\n    Integer userId;\n    PostEntity postEntity;\n}",
+      "src": null,
+      "argument_names": [
+        "postId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.PostController.getPostDetail",
+      "url_path": "/nicefish/cms/post/post-detail/{postId}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.PostController.writePost",
+      "def_req": "PostEntity postEntity\n\n\nclass PostEntity {\n    Integer postId;\n    String thumbImgUrl;\n    String headerImgUrl;\n    String title;\n    Date postTime;\n    String content;\n    String summary;\n    String originalURL;\n    String postType;\n    Date updateTime;\n    Integer readTimes;\n    Integer likedTimes;\n    Integer commentTimes;\n    Integer userId;\n    String email;\n    String nickName;\n    String enableComment;\n    Integer status;\n    List<FileUploadEntity> fileUploadEntities;\n}\n\nclass FileUploadEntity {\n    Integer id;\n    String fileName;\n    String displayName;\n    String fileSuffix;\n    Long fileSize;\n    String path;\n    String url;\n    String fileDesc;\n    Integer displayOrder;\n    Date upTime;\n    Integer userId;\n    PostEntity postEntity;\n}",
+      "def_resp": "PostEntity\n\n\nclass PostEntity {\n    Integer postId;\n    String thumbImgUrl;\n    String headerImgUrl;\n    String title;\n    Date postTime;\n    String content;\n    String summary;\n    String originalURL;\n    String postType;\n    Date updateTime;\n    Integer readTimes;\n    Integer likedTimes;\n    Integer commentTimes;\n    Integer userId;\n    String email;\n    String nickName;\n    String enableComment;\n    Integer status;\n    List<FileUploadEntity> fileUploadEntities;\n}\n\nclass FileUploadEntity {\n    Integer id;\n    String fileName;\n    String displayName;\n    String fileSuffix;\n    Long fileSize;\n    String path;\n    String url;\n    String fileDesc;\n    Integer displayOrder;\n    Date upTime;\n    Integer userId;\n    PostEntity postEntity;\n}",
+      "src": null,
+      "argument_names": [
+        "postEntity"
+      ],
+      "controller_path": "com.nicefish.cms.controller.PostController.writePost",
+      "url_path": "/nicefish/cms/post/write-post",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.PostController.updatePost",
+      "def_req": "PostEntity postEntity\n\n\nclass PostEntity {\n    Integer postId;\n    String thumbImgUrl;\n    String headerImgUrl;\n    String title;\n    Date postTime;\n    String content;\n    String summary;\n    String originalURL;\n    String postType;\n    Date updateTime;\n    Integer readTimes;\n    Integer likedTimes;\n    Integer commentTimes;\n    Integer userId;\n    String email;\n    String nickName;\n    String enableComment;\n    Integer status;\n    List<FileUploadEntity> fileUploadEntities;\n}\n\nclass FileUploadEntity {\n    Integer id;\n    String fileName;\n    String displayName;\n    String fileSuffix;\n    Long fileSize;\n    String path;\n    String url;\n    String fileDesc;\n    Integer displayOrder;\n    Date upTime;\n    Integer userId;\n    PostEntity postEntity;\n}",
+      "def_resp": "PostEntity\n\n\nclass PostEntity {\n    Integer postId;\n    String thumbImgUrl;\n    String headerImgUrl;\n    String title;\n    Date postTime;\n    String content;\n    String summary;\n    String originalURL;\n    String postType;\n    Date updateTime;\n    Integer readTimes;\n    Integer likedTimes;\n    Integer commentTimes;\n    Integer userId;\n    String email;\n    String nickName;\n    String enableComment;\n    Integer status;\n    List<FileUploadEntity> fileUploadEntities;\n}\n\nclass FileUploadEntity {\n    Integer id;\n    String fileName;\n    String displayName;\n    String fileSuffix;\n    Long fileSize;\n    String path;\n    String url;\n    String fileDesc;\n    Integer displayOrder;\n    Date upTime;\n    Integer userId;\n    PostEntity postEntity;\n}",
+      "src": null,
+      "argument_names": [
+        "postEntity"
+      ],
+      "controller_path": "com.nicefish.cms.controller.PostController.updatePost",
+      "url_path": "/nicefish/cms/post/update-post",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.PostController.getPostTableByUserId",
+      "def_req": "Integer userId, Integer page\n",
+      "def_resp": "Page<PostEntity>\n\n\nclass PostEntity {\n    Integer postId;\n    String thumbImgUrl;\n    String headerImgUrl;\n    String title;\n    Date postTime;\n    String content;\n    String summary;\n    String originalURL;\n    String postType;\n    Date updateTime;\n    Integer readTimes;\n    Integer likedTimes;\n    Integer commentTimes;\n    Integer userId;\n    String email;\n    String nickName;\n    String enableComment;\n    Integer status;\n    List<FileUploadEntity> fileUploadEntities;\n}\n\nclass FileUploadEntity {\n    Integer id;\n    String fileName;\n    String displayName;\n    String fileSuffix;\n    Long fileSize;\n    String path;\n    String url;\n    String fileDesc;\n    Integer displayOrder;\n    Date upTime;\n    Integer userId;\n    PostEntity postEntity;\n}",
+      "src": null,
+      "argument_names": [
+        "userId",
+        "page"
+      ],
+      "controller_path": "com.nicefish.cms.controller.PostController.getPostTableByUserId",
+      "url_path": "/nicefish/cms/post/manage/post-table/{userId}/{page}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.PostController.delPostById",
+      "def_req": "Integer postId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "postId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.PostController.delPostById",
+      "url_path": "/nicefish/cms/post/manage/del-post/{postId}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserPostRelationController.findByUserIdAndPostId",
+      "def_req": "Integer userId, Integer postId\n",
+      "def_resp": "UserPostRelationEntity\n\n\nclass UserPostRelationEntity {\n    Integer id;\n    Integer userId;\n    Integer postId;\n    Integer relationType;\n    Date time;\n}",
+      "src": null,
+      "argument_names": [
+        "userId",
+        "postId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserPostRelationController.findByUserIdAndPostId",
+      "url_path": "/nicefish/cms/user-post-relation/find-by-user-id-and-post-id/{userId}/{postId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserPostRelationController.findAllByUserId",
+      "def_req": "Integer userId\n",
+      "def_resp": "List<UserPostRelationEntity>\n\n\nclass UserPostRelationEntity {\n    Integer id;\n    Integer userId;\n    Integer postId;\n    Integer relationType;\n    Date time;\n}",
+      "src": null,
+      "argument_names": [
+        "userId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserPostRelationController.findAllByUserId",
+      "url_path": "/nicefish/cms/user-post-relation/find-all-by-user-id/{userId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserPostRelationController.findAllByPostId",
+      "def_req": "Integer postId\n",
+      "def_resp": "List<UserPostRelationEntity>\n\n\nclass UserPostRelationEntity {\n    Integer id;\n    Integer userId;\n    Integer postId;\n    Integer relationType;\n    Date time;\n}",
+      "src": null,
+      "argument_names": [
+        "postId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserPostRelationController.findAllByPostId",
+      "url_path": "/nicefish/cms/user-post-relation/find-all-by-post-id/{postId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserPostRelationController.countLikesByPostId",
+      "def_req": "Integer postId\n",
+      "def_resp": "int\n",
+      "src": null,
+      "argument_names": [
+        "postId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserPostRelationController.countLikesByPostId",
+      "url_path": "/nicefish/cms/user-post-relation/count-likes/{postId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserPostRelationController.countFavoritesByPostId",
+      "def_req": "Integer postId\n",
+      "def_resp": "int\n",
+      "src": null,
+      "argument_names": [
+        "postId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserPostRelationController.countFavoritesByPostId",
+      "url_path": "/nicefish/cms/user-post-relation/count-favorites/{postId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserPostRelationController.countLikesForUserPosts",
+      "def_req": "Integer userId\n",
+      "def_resp": "int\n",
+      "src": null,
+      "argument_names": [
+        "userId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserPostRelationController.countLikesForUserPosts",
+      "url_path": "/nicefish/cms/user-post-relation/count-likes-for-user-posts/{userId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserPostRelationController.existsRelation",
+      "def_req": "UserPostRelationEntity userPostRelationEntity\n\n\nclass UserPostRelationEntity {\n    Integer id;\n    Integer userId;\n    Integer postId;\n    Integer relationType;\n    Date time;\n}",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "userPostRelationEntity"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserPostRelationController.existsRelation",
+      "url_path": "/nicefish/cms/user-post-relation/exists-relation",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserPostRelationController.saveUserPostRelation",
+      "def_req": "UserPostRelationEntity userPostRelation\n\n\nclass UserPostRelationEntity {\n    Integer id;\n    Integer userId;\n    Integer postId;\n    Integer relationType;\n    Date time;\n}",
+      "def_resp": "void\n",
+      "src": null,
+      "argument_names": [
+        "userPostRelation"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserPostRelationController.saveUserPostRelation",
+      "url_path": "/nicefish/cms/user-post-relation/save-relation",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserPostRelationController.deleteUserPostRelation",
+      "def_req": "UserPostRelationEntity userPostRelation\n\n\nclass UserPostRelationEntity {\n    Integer id;\n    Integer userId;\n    Integer postId;\n    Integer relationType;\n    Date time;\n}",
+      "def_resp": "void\n",
+      "src": null,
+      "argument_names": [
+        "userPostRelation"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserPostRelationController.deleteUserPostRelation",
+      "url_path": "/nicefish/cms/user-post-relation/delete-relation",
+      "req_method": "delete"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserPostRelationController.findUserRelatedPosts",
+      "def_req": "UserPostRelationEntity userPostRelation\n\n\nclass UserPostRelationEntity {\n    Integer id;\n    Integer userId;\n    Integer postId;\n    Integer relationType;\n    Date time;\n}",
+      "def_resp": "List<PostEntity>\n\n\nclass PostEntity {\n    Integer postId;\n    String thumbImgUrl;\n    String headerImgUrl;\n    String title;\n    Date postTime;\n    String content;\n    String summary;\n    String originalURL;\n    String postType;\n    Date updateTime;\n    Integer readTimes;\n    Integer likedTimes;\n    Integer commentTimes;\n    Integer userId;\n    String email;\n    String nickName;\n    String enableComment;\n    Integer status;\n    List<FileUploadEntity> fileUploadEntities;\n}\n\nclass FileUploadEntity {\n    Integer id;\n    String fileName;\n    String displayName;\n    String fileSuffix;\n    Long fileSize;\n    String path;\n    String url;\n    String fileDesc;\n    Integer displayOrder;\n    Date upTime;\n    Integer userId;\n    PostEntity postEntity;\n}",
+      "src": null,
+      "argument_names": [
+        "userPostRelation"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserPostRelationController.findUserRelatedPosts",
+      "url_path": "/nicefish/cms/user-post-relation/find-user-related-posts",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserFollowController.getFollowersByUserId",
+      "def_req": "Integer userId\n",
+      "def_resp": "List<UserEntity>\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "src": null,
+      "argument_names": [
+        "userId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserFollowController.getFollowersByUserId",
+      "url_path": "/nicefish/cms/user-follow/followers/{userId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserFollowController.countFollowersByUserId",
+      "def_req": "Integer userId\n",
+      "def_resp": "Long\n",
+      "src": null,
+      "argument_names": [
+        "userId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserFollowController.countFollowersByUserId",
+      "url_path": "/nicefish/cms/user-follow/follower-count/{userId}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserFollowController.countFollowingByUserId",
+      "def_req": "Integer userId\n",
+      "def_resp": "Long\n",
+      "src": null,
+      "argument_names": [
+        "userId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserFollowController.countFollowingByUserId",
+      "url_path": "/nicefish/cms/user-follow/following-count/{userId}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserFollowController.createFollowRelation",
+      "def_req": "UserFollowEntity userFollowEntity\n\n\nclass UserFollowEntity {\n    Integer id;\n    Integer fromId;\n    Integer toId;\n    Date followTime;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userFollowEntity"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserFollowController.createFollowRelation",
+      "url_path": "/nicefish/cms/user-follow/follow",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserFollowController.deleteFollowRelation",
+      "def_req": "UserFollowEntity userFollowEntity\n\n\nclass UserFollowEntity {\n    Integer id;\n    Integer fromId;\n    Integer toId;\n    Date followTime;\n}",
+      "def_resp": "void\n",
+      "src": null,
+      "argument_names": [
+        "userFollowEntity"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserFollowController.deleteFollowRelation",
+      "url_path": "/nicefish/cms/user-follow/unfollow",
+      "req_method": "delete"
+    },
+    {
+      "name": "com.nicefish.cms.controller.UserFollowController.existsFollow",
+      "def_req": "UserFollowEntity userFollowEntity\n\n\nclass UserFollowEntity {\n    Integer id;\n    Integer fromId;\n    Integer toId;\n    Date followTime;\n}",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "userFollowEntity"
+      ],
+      "controller_path": "com.nicefish.cms.controller.UserFollowController.existsFollow",
+      "url_path": "/nicefish/cms/user-follow/exists-follow",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.cms.controller.SysParamController.getParamList",
+      "def_req": "Integer page\n",
+      "def_resp": "Page<SysParamEntity>\n\n\nclass SysParamEntity {\n    String paramKey;\n    String paramValue;\n    String paramDesc;\n}",
+      "src": null,
+      "argument_names": [
+        "page"
+      ],
+      "controller_path": "com.nicefish.cms.controller.SysParamController.getParamList",
+      "url_path": "/nicefish/cms/param/list/{page}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.SysParamController.getParamAll",
+      "def_req": "\n",
+      "def_resp": "Map<String, String>\n",
+      "src": null,
+      "argument_names": [],
+      "controller_path": "com.nicefish.cms.controller.SysParamController.getParamAll",
+      "url_path": "/nicefish/cms/param/all",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.CommentController.getCommentList",
+      "def_req": "Integer postId, Integer page\n",
+      "def_resp": "Page<CommentEntity>\n\n\nclass CommentEntity {\n    Integer id;\n    Integer postId;\n    String content;\n    Date time;\n    String ip;\n    Integer pId;\n    Integer userId;\n    String userName;\n    String nickName;\n    String email;\n    Integer status;\n}",
+      "src": null,
+      "argument_names": [
+        "postId",
+        "page"
+      ],
+      "controller_path": "com.nicefish.cms.controller.CommentController.getCommentList",
+      "url_path": "/nicefish/cms/comment/post-id/{postId}/page/{page}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.CommentController.writeComment",
+      "def_req": "CommentEntity commentEntity\n\n\nclass CommentEntity {\n    Integer id;\n    Integer postId;\n    String content;\n    Date time;\n    String ip;\n    Integer pId;\n    Integer userId;\n    String userName;\n    String nickName;\n    String email;\n    Integer status;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "commentEntity"
+      ],
+      "controller_path": "com.nicefish.cms.controller.CommentController.writeComment",
+      "url_path": "/nicefish/cms/comment/write-comment",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.CommentController.getCommentListByUserId",
+      "def_req": "Integer page\n",
+      "def_resp": "Page<CommentEntity>\n\n\nclass CommentEntity {\n    Integer id;\n    Integer postId;\n    String content;\n    Date time;\n    String ip;\n    Integer pId;\n    Integer userId;\n    String userName;\n    String nickName;\n    String email;\n    Integer status;\n}",
+      "src": null,
+      "argument_names": [
+        "page"
+      ],
+      "controller_path": "com.nicefish.cms.controller.CommentController.getCommentListByUserId",
+      "url_path": "/nicefish/cms/comment/manage/comment-table/{page}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.CommentController.deleteByCommentId",
+      "def_req": "Integer commentId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "commentId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.CommentController.deleteByCommentId",
+      "url_path": "/nicefish/cms/comment/manage/delete/{commentId}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.CommentController.deletetByPostId",
+      "def_req": "Integer postId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "postId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.CommentController.deletetByPostId",
+      "url_path": "/nicefish/cms/comment/manage/delete-by-post-id/{postId}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.CommentController.deletetByUserId",
+      "def_req": "Integer userId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userId"
+      ],
+      "controller_path": "com.nicefish.cms.controller.CommentController.deletetByUserId",
+      "url_path": "/nicefish/cms/comment/manage/delete-by-user-id/{userId}",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.cms.controller.FileUploadController.upLoad",
+      "def_req": "MultipartFile[] files\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "files"
+      ],
+      "controller_path": "com.nicefish.cms.controller.FileUploadController.upLoad",
+      "url_path": "/nicefish/cms/file/upload",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.cms.controller.FileUploadController.download",
+      "def_req": "Integer id, HttpServletResponse response\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "id",
+        "response"
+      ],
+      "controller_path": "com.nicefish.cms.controller.FileUploadController.download",
+      "url_path": "/nicefish/cms/file/download/{id}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.search.controller.PostSearchController.getAll",
+      "def_req": "\n",
+      "def_resp": "Iterable<PostSearchEntity>\n\n\nclass PostSearchEntity {\n    String postId;\n    String thumbImgUrl;\n    String headerImgUrl;\n    String title;\n    String content;\n    String summary;\n    Integer userId;\n    String email;\n    String nickName;\n}",
+      "src": null,
+      "argument_names": [],
+      "controller_path": "com.nicefish.search.controller.PostSearchController.getAll",
+      "url_path": "/nicefish/search/post/get-all",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.search.controller.PostSearchController.searchSimilar",
+      "def_req": "String keyword, int page, int size\n",
+      "def_resp": "Page<PostSearchEntity>\n\n\nclass PostSearchEntity {\n    String postId;\n    String thumbImgUrl;\n    String headerImgUrl;\n    String title;\n    String content;\n    String summary;\n    Integer userId;\n    String email;\n    String nickName;\n}",
+      "src": null,
+      "argument_names": [
+        "keyword",
+        "page",
+        "size"
+      ],
+      "controller_path": "com.nicefish.search.controller.PostSearchController.searchSimilar",
+      "url_path": "/nicefish/search/post/q/{page}/{size}/{keyword}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.search.controller.UserSearchController.getAll",
+      "def_req": "\n",
+      "def_resp": "Iterable<UserSearchEntity>\n\n\nclass UserSearchEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    String avatarURL;\n    Integer status;\n    String remark;\n}",
+      "src": null,
+      "argument_names": [],
+      "controller_path": "com.nicefish.search.controller.UserSearchController.getAll",
+      "url_path": "/nicefish/search/user/get-all",
+      "req_method": "none"
+    },
+    {
+      "name": "com.nicefish.search.controller.UserSearchController.searchSimilar",
+      "def_req": "String keyword, int page, int size\n",
+      "def_resp": "Page<UserSearchEntity>\n\n\nclass UserSearchEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    String avatarURL;\n    Integer status;\n    String remark;\n}",
+      "src": null,
+      "argument_names": [
+        "keyword",
+        "page",
+        "size"
+      ],
+      "controller_path": "com.nicefish.search.controller.UserSearchController.searchSimilar",
+      "url_path": "/nicefish/search/user/q/{page}/{size}/{keyword}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.getSessionUser",
+      "def_req": "\n",
+      "def_resp": "UserEntity\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "src": null,
+      "argument_names": [],
+      "controller_path": "com.nicefish.rbac.controller.UserController.getSessionUser",
+      "url_path": "/nicefish/auth/user/get-session-user",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.updateUser",
+      "def_req": "UserEntity userEntity\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.UserController.updateUser",
+      "url_path": "/nicefish/auth/user/update",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.updateUserRoleRelation",
+      "def_req": "UserEntity userEntity\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.UserController.updateUserRoleRelation",
+      "url_path": "/nicefish/auth/user/update-user-role-relation",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.getUserList",
+      "def_req": "UserEntity userEntity, int page\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "Page<UserEntity>\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "src": null,
+      "argument_names": [
+        "userEntity",
+        "page"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.UserController.getUserList",
+      "url_path": "/nicefish/auth/user/list/{page}",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.deleteUser",
+      "def_req": "Integer userId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.UserController.deleteUser",
+      "url_path": "/nicefish/auth/user/delete/{userId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.getUserDetail",
+      "def_req": "Integer userId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.UserController.getUserDetail",
+      "url_path": "/nicefish/auth/user/detail/{userId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.resetPwd",
+      "def_req": "UserEntity userEntity\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.UserController.resetPwd",
+      "url_path": "/nicefish/auth/user/reset-pwd",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.delUser",
+      "def_req": "Integer[] ids\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "ids"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.UserController.delUser",
+      "url_path": "/nicefish/auth/user/remove",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.changeStatus",
+      "def_req": "UserEntity userEntity\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.UserController.changeStatus",
+      "url_path": "/nicefish/auth/user/change-status",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.isUserNameUnique",
+      "def_req": "UserEntity userEntity\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "String\n",
+      "src": null,
+      "argument_names": [
+        "userEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.UserController.isUserNameUnique",
+      "url_path": "/nicefish/auth/user/is-user-name-unique",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.isPhoneUnique",
+      "def_req": "UserEntity userEntity\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "String\n",
+      "src": null,
+      "argument_names": [
+        "userEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.UserController.isPhoneUnique",
+      "url_path": "/nicefish/auth/user/is-phone-unique",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.UserController.isEmailUnique",
+      "def_req": "UserEntity userEntity\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "String\n",
+      "src": null,
+      "argument_names": [
+        "userEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.UserController.isEmailUnique",
+      "url_path": "/nicefish/auth/user/is-email-unique",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ApiPermissionController.getPermissionList",
+      "def_req": "ApiPermissionEntity apiPermissionEntity, int page\n\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "Page<ApiPermissionEntity>\n\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "src": null,
+      "argument_names": [
+        "apiPermissionEntity",
+        "page"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ApiPermissionController.getPermissionList",
+      "url_path": "/nicefish/auth/api-permission/list/{page}",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ApiPermissionController.getPermissionListAll",
+      "def_req": "ApiPermissionEntity apiPermissionEntity\n\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "Iterable<ApiPermissionEntity>\n\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "src": null,
+      "argument_names": [
+        "apiPermissionEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ApiPermissionController.getPermissionListAll",
+      "url_path": "/nicefish/auth/api-permission/list-all",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ApiPermissionController.getPermissionListByRole",
+      "def_req": "RoleEntity roleEntity\n\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "Iterable<ApiPermissionEntity>\n\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "src": null,
+      "argument_names": [
+        "roleEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ApiPermissionController.getPermissionListByRole",
+      "url_path": "/nicefish/auth/api-permission/list-all-by-role",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ApiPermissionController.getApiPermissionDetail",
+      "def_req": "Integer apiPermissionId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "apiPermissionId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ApiPermissionController.getApiPermissionDetail",
+      "url_path": "/nicefish/auth/api-permission/detail/{apiPermissionId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ApiPermissionController.createApiPermission",
+      "def_req": "ApiPermissionEntity apiPermissionEntity\n\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "apiPermissionEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ApiPermissionController.createApiPermission",
+      "url_path": "/nicefish/auth/api-permission/create",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ApiPermissionController.updatePermission",
+      "def_req": "ApiPermissionEntity apiPermissionEntity\n\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "apiPermissionEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ApiPermissionController.updatePermission",
+      "url_path": "/nicefish/auth/api-permission/update",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ApiPermissionController.deleteByApiId",
+      "def_req": "Integer apiPermissionId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "apiPermissionId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ApiPermissionController.deleteByApiId",
+      "url_path": "/nicefish/auth/api-permission/delete/{apiPermissionId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ShiroAuthController.register",
+      "def_req": "UserEntity userEntity\n\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ShiroAuthController.register",
+      "url_path": "/nicefish/auth/shiro/register",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ShiroAuthController.login",
+      "def_req": "String userName, String password, Boolean rememberMe\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userName",
+        "password",
+        "rememberMe"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ShiroAuthController.login",
+      "url_path": "/nicefish/auth/shiro/login",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ShiroAuthController.logout",
+      "def_req": "HttpServletRequest request, HttpServletResponse response\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "request",
+        "response"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ShiroAuthController.logout",
+      "url_path": "/nicefish/auth/shiro/logout",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ShiroAuthController.getMenus",
+      "def_req": "Integer userId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ShiroAuthController.getMenus",
+      "url_path": "/nicefish/auth/shiro/menu/{userId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.RoleController.getRoleList",
+      "def_req": "RoleEntity roleEntity, int page\n\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "Page<RoleEntity>\n\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "src": null,
+      "argument_names": [
+        "roleEntity",
+        "page"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.RoleController.getRoleList",
+      "url_path": "/nicefish/auth/role/list/{page}",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.RoleController.findRoleListByApiId",
+      "def_req": "int apiPermissionId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "apiPermissionId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.RoleController.findRoleListByApiId",
+      "url_path": "/nicefish/auth/role/list-by-api-id/{apiPermissionId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.RoleController.findRoleListByComponentId",
+      "def_req": "int compPermId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "compPermId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.RoleController.findRoleListByComponentId",
+      "url_path": "/nicefish/auth/role/list-by-component-id/{compPermId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.RoleController.findRoleListByUserId",
+      "def_req": "int userId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "userId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.RoleController.findRoleListByUserId",
+      "url_path": "/nicefish/auth/role/list-by-user-id/{userId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.RoleController.createRole",
+      "def_req": "RoleEntity roleEntity\n\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "roleEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.RoleController.createRole",
+      "url_path": "/nicefish/auth/role/create",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.RoleController.updateRole",
+      "def_req": "RoleEntity roleEntity\n\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "roleEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.RoleController.updateRole",
+      "url_path": "/nicefish/auth/role/update",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.RoleController.deleteRole",
+      "def_req": "Integer roleId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "roleId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.RoleController.deleteRole",
+      "url_path": "/nicefish/auth/role/delete/{roleId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.RoleController.getRoleDetail",
+      "def_req": "Integer roleId\n",
+      "def_resp": "RoleEntity\n\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "src": null,
+      "argument_names": [
+        "roleId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.RoleController.getRoleDetail",
+      "url_path": "/nicefish/auth/role/detail/{roleId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.RoleController.addAuthUsers",
+      "def_req": "Integer roleId, Integer[] userIds\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "roleId",
+        "userIds"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.RoleController.addAuthUsers",
+      "url_path": "/nicefish/auth/role/add-auth-users/{roleId}/{userIds}",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.RoleController.delAuthUsers",
+      "def_req": "Integer roleId, Integer[] userIds\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "roleId",
+        "userIds"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.RoleController.delAuthUsers",
+      "url_path": "/nicefish/auth/role/del-auth-users/{roleId}/{userIds}",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ComponentPermissionController.getPermissionList",
+      "def_req": "ComponentPermissionEntity componentPermissionEntity, int page\n\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "Page<ComponentPermissionEntity>\n\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}",
+      "src": null,
+      "argument_names": [
+        "componentPermissionEntity",
+        "page"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ComponentPermissionController.getPermissionList",
+      "url_path": "/nicefish/auth/component-permission/list/{page}",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ComponentPermissionController.getPermissionListByRole",
+      "def_req": "RoleEntity roleEntity\n\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "Iterable<ComponentPermissionEntity>\n\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}",
+      "src": null,
+      "argument_names": [
+        "roleEntity"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ComponentPermissionController.getPermissionListByRole",
+      "url_path": "/nicefish/auth/component-permission/list-all-by-role",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ComponentPermissionController.getCompPermDetail",
+      "def_req": "Integer compPermId\n",
+      "def_resp": "ComponentPermissionEntity\n\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}",
+      "src": null,
+      "argument_names": [
+        "compPermId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ComponentPermissionController.getCompPermDetail",
+      "url_path": "/nicefish/auth/component-permission/detail/{compPermId}",
+      "req_method": "get"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ComponentPermissionController.deleteComponentPermission",
+      "def_req": "Integer compPermId\n",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "compPermId"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ComponentPermissionController.deleteComponentPermission",
+      "url_path": "/nicefish/auth/component-permission/delete/{compPermId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ComponentPermissionController.createComponentPermission",
+      "def_req": "ComponentPermissionEntity componentPermission\n\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "componentPermission"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ComponentPermissionController.createComponentPermission",
+      "url_path": "/nicefish/auth/component-permission/create",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.ComponentPermissionController.updateComponentPermission",
+      "def_req": "ComponentPermissionEntity componentPermission\n\n\nclass ComponentPermissionEntity {\n    Integer compPermId;\n    String componentName;\n    String icon;\n    String url;\n    Integer displayOrder;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    Integer visiable;\n    String remark;\n    ComponentPermissionEntity parentEntity;\n    List<ComponentPermissionEntity> children;\n    List<RoleEntity> roleEntities;\n}\n\nclass RoleEntity {\n    Integer roleId;\n    String roleName;\n    Integer status;\n    String remark;\n    List<UserEntity> userEntities;\n    List<ApiPermissionEntity> apiEntities;\n    List<ComponentPermissionEntity> componentEntities;\n}\n\nclass UserEntity {\n    Integer userId;\n    String userName;\n    String nickName;\n    String password;\n    String email;\n    String cellphone;\n    Integer gender;\n    String city;\n    String education;\n    Date createTime;\n    String avatarURL;\n    String salt;\n    Integer status;\n    String remark;\n    List<RoleEntity> roleEntities;\n}\n\nclass ApiPermissionEntity {\n    Integer apiPermissionId;\n    String apiName;\n    String url;\n    String permission;\n    Date createTime;\n    Date updateTime;\n    String remark;\n    List<RoleEntity> roleEntities;\n}",
+      "def_resp": "AjaxResult\n\n\nclass AjaxResult {\n}",
+      "src": null,
+      "argument_names": [
+        "componentPermission"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.ComponentPermissionController.updateComponentPermission",
+      "url_path": "/nicefish/auth/component-permission/update",
+      "req_method": "post"
+    },
+    {
+      "name": "com.nicefish.rbac.controller.CaptchaController.getKaptchaImage",
+      "def_req": "HttpServletRequest request, HttpServletResponse response\n",
+      "def_resp": "ModelAndView\n",
+      "src": null,
+      "argument_names": [
+        "request",
+        "response"
+      ],
+      "controller_path": "com.nicefish.rbac.controller.CaptchaController.getKaptchaImage",
+      "url_path": "/nicefish/auth/captcha/captchaImage",
+      "req_method": "get"
+    }
+  ],
+  "relations_data": [],
+  "relations_control": []
+}

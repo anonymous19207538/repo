@@ -1,0 +1,42 @@
+{
+    "com.nicefish.cms.controller.PostController.getPostList": [
+        "com.nicefish.cms.controller.PostController.getPostTableByUserId",
+        "com.nicefish.cms.controller.PostController.getPostDetail",
+        "com.nicefish.rbac.controller.UserController.getUserDetail"
+    ],
+    "com.nicefish.cms.controller.FileUploadController.download": [
+        "com.nicefish.cms.controller.PostController.getPostTableByUserId",
+        "com.nicefish.cms.controller.PostController.getPostList",
+        "com.nicefish.cms.controller.PostController.getPostDetail"
+    ],
+    "com.nicefish.rbac.controller.CaptchaController.getKaptchaImage": [],
+    "com.nicefish.rbac.controller.ShiroAuthController.login": [
+        "com.nicefish.rbac.controller.UserController.getUserDetail"
+    ],
+    "com.nicefish.rbac.controller.UserController.getUserDetail": [
+        "com.nicefish.rbac.controller.ShiroAuthController.getMenus",
+        "com.nicefish.cms.controller.PostController.getPostTableByUserId"
+    ],
+    "com.nicefish.cms.controller.PostController.getPostTableByUserId": [
+        "com.nicefish.cms.controller.PostController.getPostDetail"
+    ],
+    "com.nicefish.cms.controller.PostController.getPostDetail": [
+        "com.nicefish.cms.controller.PostController.getPostTableByUserId",
+        "com.nicefish.cms.controller.PostController.getPostList"
+    ],
+    "com.nicefish.cms.controller.CommentController.getCommentList": [
+        "com.nicefish.cms.controller.PostController.getPostDetail",
+        "com.nicefish.rbac.controller.UserController.getUserDetail"
+    ],
+    "com.nicefish.rbac.controller.ShiroAuthController.register": [
+        "com.nicefish.rbac.controller.UserController.getUserDetail",
+        "com.nicefish.rbac.controller.ShiroAuthController.getMenus"
+    ],
+    "com.nicefish.rbac.controller.ShiroAuthController.getMenus": [
+        "com.nicefish.rbac.controller.UserController.getUserDetail"
+    ],
+    "com.nicefish.rbac.controller.ShiroAuthController.logout": [],
+    "com.nicefish.cms.controller.CommentController.getCommentListByUserId": [
+        "com.nicefish.cms.controller.PostController.getPostTableByUserId"
+    ]
+}

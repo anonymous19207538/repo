@@ -1,0 +1,11 @@
+[submodule "target-projects/train-ticket"]
+    path = target-projects/train-ticket
+    url = git@github.com:code-philia/WebNormPlus-tgt-train-ticket.git
+
+[submodule "target-projects/NiceFish-React"]
+    path = target-projects/NiceFish-React
+    url = git@github.com:code-philia/WebNormPlus-tgt-NiceFish-React.git
+
+[submodule "target-projects/nicefish-spring-boot"]
+    path = target-projects/nicefish-spring-boot
+    url = git@github.com:code-philia/WebNormPlus-tgt-nicefish-spring-cloud.git

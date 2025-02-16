@@ -1,0 +1,2098 @@
+{
+    "com.nicefish.cms.controller.CommentController.getCommentList": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ],
+            [
+                "page",
+                "Integer"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.CommentController.writeComment": {
+        "input_parameters": [
+            [
+                "commentEntity",
+                "CommentEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.CommentEntity",
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.CommentController.getCommentListByUserId": {
+        "input_parameters": [
+            [
+                "page",
+                "Integer"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.CommentController.deleteByCommentId": {
+        "input_parameters": [
+            [
+                "commentId",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.CommentController.deletetByPostId": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.CommentController.deletetByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.FileUploadController.upLoad": {
+        "input_parameters": [
+            [
+                "files",
+                "MultipartFile"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.FileUploadController.download": {
+        "input_parameters": [
+            [
+                "id",
+                "Integer"
+            ],
+            [
+                "response",
+                "HttpServletResponse"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.PostController.getPostList": {
+        "input_parameters": [
+            [
+                "page",
+                "Integer"
+            ],
+            [
+                "rows",
+                "Integer"
+            ],
+            [
+                "request",
+                "HttpServletRequest"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.PostController.getPostDetail": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "PostEntity",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.PostEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.PostController.setUserInfoToPostEntity": {
+        "input_parameters": [
+            [
+                "postEntity",
+                "PostEntity"
+            ]
+        ],
+        "return_type": "PostEntity",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.PostEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.PostController.writePost": {
+        "input_parameters": [
+            [
+                "postEntity",
+                "PostEntity"
+            ]
+        ],
+        "return_type": "PostEntity",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.PostEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.PostController.updatePost": {
+        "input_parameters": [
+            [
+                "postEntity",
+                "PostEntity"
+            ]
+        ],
+        "return_type": "PostEntity",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.PostEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.PostController.getPostTableByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ],
+            [
+                "page",
+                "Integer"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.PostController.delPostById": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.SysParamController.getParamList": {
+        "input_parameters": [
+            [
+                "page",
+                "Integer"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.SysParamController.getParamAll": {
+        "input_parameters": [],
+        "return_type": "Map",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.UserFollowController.getFollowersByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "List",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.UserFollowController.countFollowersByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "Long",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.UserFollowController.countFollowingByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "Long",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.UserFollowController.createFollowRelation": {
+        "input_parameters": [
+            [
+                "userFollowEntity",
+                "UserFollowEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserFollowEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.UserFollowController.deleteFollowRelation": {
+        "input_parameters": [
+            [
+                "userFollowEntity",
+                "UserFollowEntity"
+            ]
+        ],
+        "return_type": "void",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserFollowEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.UserFollowController.existsFollow": {
+        "input_parameters": [
+            [
+                "userFollowEntity",
+                "UserFollowEntity"
+            ]
+        ],
+        "return_type": "boolean",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserFollowEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.UserPostRelationController.findByUserIdAndPostId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ],
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "UserPostRelationEntity",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserPostRelationEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.UserPostRelationController.findAllByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "List",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.UserPostRelationController.findAllByPostId": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "List",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.UserPostRelationController.countLikesByPostId": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.UserPostRelationController.countFavoritesByPostId": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.UserPostRelationController.countLikesForUserPosts": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": null
+    },
+    "com.nicefish.cms.controller.UserPostRelationController.existsRelation": {
+        "input_parameters": [
+            [
+                "userPostRelationEntity",
+                "UserPostRelationEntity"
+            ]
+        ],
+        "return_type": "boolean",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserPostRelationEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.UserPostRelationController.saveUserPostRelation": {
+        "input_parameters": [
+            [
+                "userPostRelation",
+                "UserPostRelationEntity"
+            ]
+        ],
+        "return_type": "void",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserPostRelationEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.UserPostRelationController.deleteUserPostRelation": {
+        "input_parameters": [
+            [
+                "userPostRelation",
+                "UserPostRelationEntity"
+            ]
+        ],
+        "return_type": "void",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserPostRelationEntity"
+        ]
+    },
+    "com.nicefish.cms.controller.UserPostRelationController.findUserRelatedPosts": {
+        "input_parameters": [
+            [
+                "userPostRelation",
+                "UserPostRelationEntity"
+            ]
+        ],
+        "return_type": "List",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserPostRelationEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.CommentServiceImpl.findByPostId": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ],
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.CommentServiceImpl.saveComment": {
+        "input_parameters": [
+            [
+                "commentEntity",
+                "CommentEntity"
+            ]
+        ],
+        "return_type": "CommentEntity",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.CommentEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.CommentServiceImpl.findAllByUserIdAndPaging": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ],
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.CommentServiceImpl.countByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "Integer",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.CommentServiceImpl.deleteById": {
+        "input_parameters": [
+            [
+                "commentId",
+                "Integer"
+            ]
+        ],
+        "return_type": "void",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.CommentServiceImpl.deletetByPostId": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "Integer",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.CommentServiceImpl.deleteByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "Integer",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.FileUploadServiceImpl.upload": {
+        "input_parameters": [
+            [
+                "files",
+                "MultipartFile"
+            ]
+        ],
+        "return_type": "List",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.FileUploadEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.FileUploadServiceImpl.getFileById": {
+        "input_parameters": [
+            [
+                "id",
+                "Integer"
+            ]
+        ],
+        "return_type": "FileUploadEntity",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.FileUploadEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.FileUploadServiceImpl.download": {
+        "input_parameters": [
+            [
+                "id",
+                "Integer"
+            ],
+            [
+                "response",
+                "HttpServletResponse"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.FileUploadEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.PostServiceImpl.getPostsPaging": {
+        "input_parameters": [
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.PostServiceImpl.getOne": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "PostEntity",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.PostEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.PostServiceImpl.savePost": {
+        "input_parameters": [
+            [
+                "postEntity",
+                "PostEntity"
+            ]
+        ],
+        "return_type": "PostEntity",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.FileUploadEntity",
+            "com.nicefish.cms.jpa.entity.PostFileUploadEntity",
+            "com.nicefish.cms.jpa.entity.PostEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.PostServiceImpl.delPost": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "Integer",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.PostServiceImpl.getPostsByUserIdAndPaging": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ],
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.SysParamServiceImpl.getParamPaging": {
+        "input_parameters": [
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.SysParamServiceImpl.getAllParamJSON": {
+        "input_parameters": [],
+        "return_type": "Map",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.SysParamEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.UserFollowServiceImpl.findFollowersByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "List",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.UserFollowServiceImpl.countFollowersByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "Long",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.UserFollowServiceImpl.countFollowingByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "Long",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.UserFollowServiceImpl.createFollowRelation": {
+        "input_parameters": [
+            [
+                "userFollowEntity",
+                "UserFollowEntity"
+            ]
+        ],
+        "return_type": "UserFollowEntity",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserFollowEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.UserFollowServiceImpl.deleteFollowRelation": {
+        "input_parameters": [
+            [
+                "userFollowEntity",
+                "UserFollowEntity"
+            ]
+        ],
+        "return_type": "void",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserFollowEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.UserFollowServiceImpl.existsFollow": {
+        "input_parameters": [
+            [
+                "userFollowEntity",
+                "UserFollowEntity"
+            ]
+        ],
+        "return_type": "boolean",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserFollowEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.UserPostRelationServiceImpl.saveUserPostRelation": {
+        "input_parameters": [
+            [
+                "userPostRelation",
+                "UserPostRelationEntity"
+            ]
+        ],
+        "return_type": "void",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserPostRelationEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.UserPostRelationServiceImpl.findByUserIdAndPostId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ],
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "UserPostRelationEntity",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserPostRelationEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.UserPostRelationServiceImpl.findAllByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "List",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.UserPostRelationServiceImpl.findUserRelatedPosts": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ],
+            [
+                "relationType",
+                "Integer"
+            ]
+        ],
+        "return_type": "List",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.UserPostRelationServiceImpl.findAllByPostId": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ]
+        ],
+        "return_type": "List",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.UserPostRelationServiceImpl.countByPostIdAndRelationType": {
+        "input_parameters": [
+            [
+                "postId",
+                "Integer"
+            ],
+            [
+                "relationType",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.UserPostRelationServiceImpl.countLikesForUserPosts": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": null
+    },
+    "com.nicefish.cms.service.impl.UserPostRelationServiceImpl.existsRelation": {
+        "input_parameters": [
+            [
+                "userPostRelationEntity",
+                "UserPostRelationEntity"
+            ]
+        ],
+        "return_type": "boolean",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserPostRelationEntity"
+        ]
+    },
+    "com.nicefish.cms.service.impl.UserPostRelationServiceImpl.deleteUserPostRelation": {
+        "input_parameters": [
+            [
+                "userPostRelation",
+                "UserPostRelationEntity"
+            ]
+        ],
+        "return_type": "void",
+        "entity": [
+            "com.nicefish.cms.jpa.entity.UserPostRelationEntity"
+        ]
+    },
+    "com.nicefish.search.controller.PostSearchController.getAll": {
+        "input_parameters": [],
+        "return_type": "Iterable",
+        "entity": null
+    },
+    "com.nicefish.search.controller.PostSearchController.searchSimilar": {
+        "input_parameters": [
+            [
+                "keyword",
+                "String"
+            ],
+            [
+                "page",
+                "int"
+            ],
+            [
+                "size",
+                "int"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.search.entity.PostSearchEntity"
+        ]
+    },
+    "com.nicefish.search.controller.UserSearchController.getAll": {
+        "input_parameters": [],
+        "return_type": "Iterable",
+        "entity": null
+    },
+    "com.nicefish.search.controller.UserSearchController.searchSimilar": {
+        "input_parameters": [
+            [
+                "keyword",
+                "String"
+            ],
+            [
+                "page",
+                "int"
+            ],
+            [
+                "size",
+                "int"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.search.entity.UserSearchEntity"
+        ]
+    },
+    "com.nicefish.search.service.impl.PostSearchServiceImpl.getAll": {
+        "input_parameters": [],
+        "return_type": "Iterable",
+        "entity": null
+    },
+    "com.nicefish.search.service.impl.PostSearchServiceImpl.searchSimilar": {
+        "input_parameters": [
+            [
+                "entity",
+                "PostSearchEntity"
+            ],
+            [
+                "page",
+                "int"
+            ],
+            [
+                "size",
+                "int"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.search.entity.PostSearchEntity"
+        ]
+    },
+    "com.nicefish.search.service.impl.UserSearchServiceImpl.getAll": {
+        "input_parameters": [],
+        "return_type": "Iterable",
+        "entity": null
+    },
+    "com.nicefish.search.service.impl.UserSearchServiceImpl.searchSimilar": {
+        "input_parameters": [
+            [
+                "entity",
+                "UserSearchEntity"
+            ],
+            [
+                "page",
+                "int"
+            ],
+            [
+                "size",
+                "int"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.search.entity.UserSearchEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ApiPermissionController.getPermissionList": {
+        "input_parameters": [
+            [
+                "apiPermissionEntity",
+                "ApiPermissionEntity"
+            ],
+            [
+                "page",
+                "int"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ApiPermissionController.getPermissionListAll": {
+        "input_parameters": [
+            [
+                "apiPermissionEntity",
+                "ApiPermissionEntity"
+            ]
+        ],
+        "return_type": "Iterable",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ApiPermissionController.getPermissionListByRole": {
+        "input_parameters": [
+            [
+                "roleEntity",
+                "RoleEntity"
+            ]
+        ],
+        "return_type": "Iterable",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ApiPermissionController.getApiPermissionDetail": {
+        "input_parameters": [
+            [
+                "apiPermissionId",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.rbac.controller.ApiPermissionController.createApiPermission": {
+        "input_parameters": [
+            [
+                "apiPermissionEntity",
+                "ApiPermissionEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ApiPermissionController.updatePermission": {
+        "input_parameters": [
+            [
+                "apiPermissionEntity",
+                "ApiPermissionEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ApiPermissionController.deleteByApiId": {
+        "input_parameters": [
+            [
+                "apiPermissionId",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.rbac.controller.CaptchaController.getKaptchaImage": {
+        "input_parameters": [
+            [
+                "request",
+                "HttpServletRequest"
+            ],
+            [
+                "response",
+                "HttpServletResponse"
+            ]
+        ],
+        "return_type": "ModelAndView",
+        "entity": null
+    },
+    "com.nicefish.rbac.controller.ComponentPermissionController.getPermissionList": {
+        "input_parameters": [
+            [
+                "componentPermissionEntity",
+                "ComponentPermissionEntity"
+            ],
+            [
+                "page",
+                "int"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ComponentPermissionController.getPermissionListByRole": {
+        "input_parameters": [
+            [
+                "roleEntity",
+                "RoleEntity"
+            ]
+        ],
+        "return_type": "Iterable",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ComponentPermissionController.getCompPermDetail": {
+        "input_parameters": [
+            [
+                "compPermId",
+                "Integer"
+            ]
+        ],
+        "return_type": "ComponentPermissionEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ComponentPermissionController.deleteComponentPermission": {
+        "input_parameters": [
+            [
+                "compPermId",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.rbac.controller.ComponentPermissionController.createComponentPermission": {
+        "input_parameters": [
+            [
+                "componentPermission",
+                "ComponentPermissionEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ComponentPermissionController.updateComponentPermission": {
+        "input_parameters": [
+            [
+                "componentPermission",
+                "ComponentPermissionEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.RoleController.getRoleList": {
+        "input_parameters": [
+            [
+                "roleEntity",
+                "RoleEntity"
+            ],
+            [
+                "page",
+                "int"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.RoleController.findRoleListByApiId": {
+        "input_parameters": [
+            [
+                "apiPermissionId",
+                "int"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.RoleController.findRoleListByComponentId": {
+        "input_parameters": [
+            [
+                "compPermId",
+                "int"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.RoleController.findRoleListByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "int"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.RoleController.createRole": {
+        "input_parameters": [
+            [
+                "roleEntity",
+                "RoleEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.RoleController.updateRole": {
+        "input_parameters": [
+            [
+                "roleEntity",
+                "RoleEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.RoleController.deleteRole": {
+        "input_parameters": [
+            [
+                "roleId",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.rbac.controller.RoleController.getRoleDetail": {
+        "input_parameters": [
+            [
+                "roleId",
+                "Integer"
+            ]
+        ],
+        "return_type": "RoleEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.RoleController.addAuthUsers": {
+        "input_parameters": [
+            [
+                "roleId",
+                "Integer"
+            ],
+            [
+                "userIds",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.rbac.controller.RoleController.delAuthUsers": {
+        "input_parameters": [
+            [
+                "roleId",
+                "Integer"
+            ],
+            [
+                "userIds",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.rbac.controller.ShiroAuthController.register": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ShiroAuthController.login": {
+        "input_parameters": [
+            [
+                "userName",
+                "String"
+            ],
+            [
+                "password",
+                "String"
+            ],
+            [
+                "rememberMe",
+                "Boolean"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.ShiroAuthController.logout": {
+        "input_parameters": [
+            [
+                "request",
+                "HttpServletRequest"
+            ],
+            [
+                "response",
+                "HttpServletResponse"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.rbac.controller.ShiroAuthController.getMenus": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.UserController.getSessionUser": {
+        "input_parameters": [],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.UserController.updateUser": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.UserController.updateUserRoleRelation": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.UserController.getUserList": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ],
+            [
+                "page",
+                "int"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.UserController.deleteUser": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.rbac.controller.UserController.getUserDetail": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.UserController.resetPwd": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.UserController.delUser": {
+        "input_parameters": [
+            [
+                "ids",
+                "Integer"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": null
+    },
+    "com.nicefish.rbac.controller.UserController.changeStatus": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "AjaxResult",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.UserController.isUserNameUnique": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "String",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.UserController.isPhoneUnique": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "String",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.controller.UserController.isEmailUnique": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "String",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ApiPermissionServiceImpl.getPermListPaging": {
+        "input_parameters": [
+            [
+                "permEntity",
+                "ApiPermissionEntity"
+            ],
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ApiPermissionServiceImpl.toPredicate": {
+        "input_parameters": [
+            [
+                "root",
+                "Root"
+            ],
+            [
+                "criteriaQuery",
+                "CriteriaQuery"
+            ],
+            [
+                "criteriaBuilder",
+                "CriteriaBuilder"
+            ]
+        ],
+        "return_type": "Predicate",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.ApiPermissionServiceImpl.getPermListAll": {
+        "input_parameters": [
+            [
+                "apiPermissionEntity",
+                "ApiPermissionEntity"
+            ]
+        ],
+        "return_type": "Iterable",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ApiPermissionServiceImpl.getPermListAllByRole": {
+        "input_parameters": [
+            [
+                "roleEntity",
+                "RoleEntity"
+            ]
+        ],
+        "return_type": "Iterable",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ApiPermissionServiceImpl.createApiPermission": {
+        "input_parameters": [
+            [
+                "permEntity",
+                "ApiPermissionEntity"
+            ]
+        ],
+        "return_type": "ApiPermissionEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ApiPermissionServiceImpl.updatePermission": {
+        "input_parameters": [
+            [
+                "permEntity",
+                "ApiPermissionEntity"
+            ]
+        ],
+        "return_type": "ApiPermissionEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ApiPermissionServiceImpl.getApiPermissionById": {
+        "input_parameters": [
+            [
+                "apiPermissionId",
+                "Integer"
+            ]
+        ],
+        "return_type": "ApiPermissionEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ApiPermissionServiceImpl.deleteByApiId": {
+        "input_parameters": [
+            [
+                "apiPermissionId",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.ComponentPermissionServiceImpl.getComponentPermissionTree": {
+        "input_parameters": [
+            [
+                "componentPermissionEntity",
+                "ComponentPermissionEntity"
+            ],
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ComponentPermissionServiceImpl.toPredicate": {
+        "input_parameters": [
+            [
+                "root",
+                "Root"
+            ],
+            [
+                "criteriaQuery",
+                "CriteriaQuery"
+            ],
+            [
+                "criteriaBuilder",
+                "CriteriaBuilder"
+            ]
+        ],
+        "return_type": "Predicate",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.ComponentPermissionServiceImpl.getPermListAllByRole": {
+        "input_parameters": [
+            [
+                "roleEntity",
+                "RoleEntity"
+            ]
+        ],
+        "return_type": "Iterable",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ComponentPermissionServiceImpl.getComponentPermissionDetail": {
+        "input_parameters": [
+            [
+                "compPermId",
+                "Integer"
+            ]
+        ],
+        "return_type": "ComponentPermissionEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ComponentPermissionServiceImpl.createComponentPermission": {
+        "input_parameters": [
+            [
+                "componentPermissionEntity",
+                "ComponentPermissionEntity"
+            ]
+        ],
+        "return_type": "ComponentPermissionEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ComponentPermissionServiceImpl.updateComponentPermission": {
+        "input_parameters": [
+            [
+                "componentPermissionEntity",
+                "ComponentPermissionEntity"
+            ]
+        ],
+        "return_type": "ComponentPermissionEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.ComponentPermissionServiceImpl.deleteComponentPermission": {
+        "input_parameters": [
+            [
+                "compPermId",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.ComponentPermissionServiceImpl.getComponentPermissionsByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "Iterable",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity",
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.NiceFishSessionServiceImpl.findDistinctBySessionId": {
+        "input_parameters": [
+            [
+                "sessionId",
+                "String"
+            ]
+        ],
+        "return_type": "NiceFishSessionEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.NiceFishSessionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.NiceFishSessionServiceImpl.findNiceFishSessionEntitiesByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ],
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.NiceFishSessionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.NiceFishSessionServiceImpl.toPredicate": {
+        "input_parameters": [
+            [
+                "root",
+                "Root"
+            ],
+            [
+                "criteriaQuery",
+                "CriteriaQuery"
+            ],
+            [
+                "criteriaBuilder",
+                "CriteriaBuilder"
+            ]
+        ],
+        "return_type": "Predicate",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.NiceFishSessionServiceImpl.deleteDistinctBySessionId": {
+        "input_parameters": [
+            [
+                "sessionId",
+                "String"
+            ]
+        ],
+        "return_type": "int",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.NiceFishSessionServiceImpl.saveSession": {
+        "input_parameters": [
+            [
+                "session",
+                "NiceFishSessionEntity"
+            ]
+        ],
+        "return_type": "NiceFishSessionEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.NiceFishSessionEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.RoleServiceImpl.saveRoleApiPermissions": {
+        "input_parameters": [
+            [
+                "newRoleEntity",
+                "RoleEntity"
+            ]
+        ],
+        "return_type": "void",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity",
+            "com.nicefish.rbac.jpa.entity.RoleApiEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.RoleServiceImpl.saveRoleComponentPermissions": {
+        "input_parameters": [
+            [
+                "newRoleEntity",
+                "RoleEntity"
+            ]
+        ],
+        "return_type": "void",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity",
+            "com.nicefish.rbac.jpa.entity.RoleComponentEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.RoleServiceImpl.createRole": {
+        "input_parameters": [
+            [
+                "newRoleEntity",
+                "RoleEntity"
+            ]
+        ],
+        "return_type": "RoleEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.RoleServiceImpl.updateRole": {
+        "input_parameters": [
+            [
+                "newRoleEntity",
+                "RoleEntity"
+            ]
+        ],
+        "return_type": "RoleEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.RoleServiceImpl.deleteRole": {
+        "input_parameters": [
+            [
+                "roleId",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.RoleServiceImpl.getRoleListPaging": {
+        "input_parameters": [
+            [
+                "roleEntity",
+                "RoleEntity"
+            ],
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.RoleServiceImpl.toPredicate": {
+        "input_parameters": [
+            [
+                "root",
+                "Root"
+            ],
+            [
+                "criteriaQuery",
+                "CriteriaQuery"
+            ],
+            [
+                "criteriaBuilder",
+                "CriteriaBuilder"
+            ]
+        ],
+        "return_type": "Predicate",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.RoleServiceImpl.getRoleById": {
+        "input_parameters": [
+            [
+                "roleId",
+                "Integer"
+            ]
+        ],
+        "return_type": "RoleEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.RoleServiceImpl.deleteAuthUsers": {
+        "input_parameters": [
+            [
+                "roleId",
+                "Integer"
+            ],
+            [
+                "userIds",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.RoleServiceImpl.addAuthUsers": {
+        "input_parameters": [
+            [
+                "roleId",
+                "Integer"
+            ],
+            [
+                "userIds",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserRoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.resetPwd": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.setUserStatus": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.updateUser": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.updateUserRoleRelation": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity",
+            "com.nicefish.rbac.jpa.entity.UserRoleEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.createUser": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.getUserList": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ],
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.toPredicate": {
+        "input_parameters": [
+            [
+                "root",
+                "Root"
+            ],
+            [
+                "criteriaQuery",
+                "CriteriaQuery"
+            ],
+            [
+                "criteriaBuilder",
+                "CriteriaBuilder"
+            ]
+        ],
+        "return_type": "Predicate",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.getAllocatedList": {
+        "input_parameters": [
+            [
+                "roleEntity",
+                "RoleEntity"
+            ],
+            [
+                "userEntity",
+                "UserEntity"
+            ],
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.getUnallocatedList": {
+        "input_parameters": [
+            [
+                "roleEntity",
+                "RoleEntity"
+            ],
+            [
+                "userEntity",
+                "UserEntity"
+            ],
+            [
+                "pageable",
+                "Pageable"
+            ]
+        ],
+        "return_type": "Page",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.getUserByUserName": {
+        "input_parameters": [
+            [
+                "userName",
+                "String"
+            ]
+        ],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.getUserByCellphone": {
+        "input_parameters": [
+            [
+                "cellphone",
+                "String"
+            ]
+        ],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.getUserByEmail": {
+        "input_parameters": [
+            [
+                "email",
+                "String"
+            ]
+        ],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.getUserByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.deleteByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.deleteByIds": {
+        "input_parameters": [
+            [
+                "ids",
+                "Integer"
+            ]
+        ],
+        "return_type": "int",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.saveUser": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ]
+        ],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.isUserNameUnique": {
+        "input_parameters": [
+            [
+                "userName",
+                "String"
+            ]
+        ],
+        "return_type": "boolean",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.isPhoneUnique": {
+        "input_parameters": [
+            [
+                "cellphone",
+                "String"
+            ]
+        ],
+        "return_type": "boolean",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.isEmailUnique": {
+        "input_parameters": [
+            [
+                "email",
+                "String"
+            ]
+        ],
+        "return_type": "boolean",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.getRoleList": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "String",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.matches": {
+        "input_parameters": [
+            [
+                "userEntity",
+                "UserEntity"
+            ],
+            [
+                "newPassword",
+                "String"
+            ]
+        ],
+        "return_type": "boolean",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.encryptPassword": {
+        "input_parameters": [
+            [
+                "username",
+                "String"
+            ],
+            [
+                "password",
+                "String"
+            ],
+            [
+                "salt",
+                "String"
+            ]
+        ],
+        "return_type": "String",
+        "entity": null
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.checkUser": {
+        "input_parameters": [
+            [
+                "userName",
+                "String"
+            ],
+            [
+                "password",
+                "String"
+            ]
+        ],
+        "return_type": "UserEntity",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity"
+        ]
+    },
+    "com.nicefish.rbac.service.impl.UserServiceImpl.getPermStringsByUserId": {
+        "input_parameters": [
+            [
+                "userId",
+                "Integer"
+            ]
+        ],
+        "return_type": "Set",
+        "entity": [
+            "com.nicefish.rbac.jpa.entity.UserEntity",
+            "com.nicefish.rbac.jpa.entity.ApiPermissionEntity",
+            "com.nicefish.rbac.jpa.entity.RoleEntity",
+            "com.nicefish.rbac.jpa.entity.ComponentPermissionEntity"
+        ]
+    }
+}

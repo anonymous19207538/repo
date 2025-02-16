@@ -1,0 +1,225 @@
+{
+    "verifycode.service.impl.VerifyCodeServiceImpl.getImageCode": [],
+    "travelplan.service.TravelPlanServiceImpl.getQuickest": [
+    ],
+    "plan.service.RoutePlanServiceImpl.searchQuickestResult": [],
+    "travel.service.TravelServiceImpl.queryByBatch": [],
+    "fdse.microservice.service.BasicServiceImpl.queryForTravels": [
+    ],
+    "fdse.microservice.service.StationServiceImpl.queryForIdBatch": [],
+    "train.service.TrainServiceImpl.retrieveByNames": [],
+    "route.service.RouteServiceImpl.getRouteByIds": [],
+    "price.service.PriceServiceImpl.findByRouteIdsAndTrainTypes": [
+    ],
+    "seat.service.SeatServiceImpl.getLeftTicketOfInterval": [
+    ],
+    "order.service.OrderServiceImpl.getSoldTickets": [
+    ],
+    "config.service.ConfigServiceImpl.query": [],
+    "travel2.service.TravelServiceImpl.queryByBatch": [],
+    "other.service.OrderOtherServiceImpl.getSoldTickets": [
+    ],
+    "travel.service.TravelServiceImpl.getRouteByTripId": [
+    ],
+    "route.service.RouteServiceImpl.getRouteById": [
+    ],
+    "train.service.TrainServiceImpl.retrieveByName": [
+    ],
+    "auth.service.impl.TokenServiceImpl.getToken": [
+    ],
+    "verifycode.service.impl.VerifyCodeServiceImpl.verifyCode": [
+    ],
+    "travel2.service.TravelServiceImpl.getRouteByTripId": [
+    ],
+    "travelplan.service.TravelPlanServiceImpl.getCheapest": [
+    ],
+    "plan.service.RoutePlanServiceImpl.searchCheapestResult": [
+    ],
+    "consign.service.ConsignServiceImpl.queryByAccountId": [
+    ],
+    "order.service.OrderServiceImpl.queryOrdersForRefresh": [
+    ],
+    "order.service.OrderServiceImpl.queryOrders": [
+    ],
+    "other.service.OrderOtherServiceImpl.queryOrdersForRefresh": [
+    ],
+    "other.service.OrderOtherServiceImpl.queryOrders": [
+    ],
+    "execute.serivce.ExecuteServiceImpl.ticketCollect": [
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.queryOrdersForRefresh"
+    ],
+    "order.service.OrderServiceImpl.getOrderById": [
+    ],
+    "other.service.OrderOtherServiceImpl.getOrderById": [
+    ],
+    "other.service.OrderOtherServiceImpl.modifyOrder": [
+        "order.service.OrderServiceImpl.getOrderById",
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.getOrderById"
+    ],
+    "order.service.OrderServiceImpl.modifyOrder": [
+        "order.service.OrderServiceImpl.getOrderById"
+    ],
+    "execute.serivce.ExecuteServiceImpl.ticketExecute": [
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.queryOrdersForRefresh"
+    ],
+    "travelplan.service.TravelPlanServiceImpl.getMinStation": [
+    ],
+    "plan.service.RoutePlanServiceImpl.searchMinStopStations": [],
+    "route.service.RouteServiceImpl.getRouteByStartAndEnd": [],
+    "travel.service.TravelServiceImpl.getTripByRoute": [],
+    "travel2.service.TravelServiceImpl.getTripByRoute": [],
+    "travel.service.TravelServiceImpl.getTripAllDetailInfo": [],
+    "fdse.microservice.service.BasicServiceImpl.queryForTravel": [
+    ],
+    "fdse.microservice.service.StationServiceImpl.queryForId": [],
+    "price.service.PriceServiceImpl.findByRouteIdAndTrainType": [],
+    "foodsearch.service.FoodServiceImpl.getAllFood": [],
+    "assurance.service.AssuranceServiceImpl.getAllAssuranceTypes": [],
+    "contacts.service.ContactsServiceImpl.findContactsByAccountId": [],
+    "trainFood.service.TrainFoodServiceImpl.listTrainFoodByTripId": [
+    ],
+    "preserveOther.service.PreserveOtherServiceImpl.preserve": [
+        "contacts.service.ContactsServiceImpl.findContactsByAccountId",
+        "consign.service.ConsignServiceImpl.insertConsignRecord",
+        "foodsearch.service.FoodServiceImpl.createFoodOrder",
+        "consignprice.service.ConsignPriceServiceImpl.getPriceByWeightAndRegion"
+    ],
+    "security.service.SecurityServiceImpl.check": [
+    ],
+    "order.service.OrderServiceImpl.checkSecurityAboutOrder": [
+    ],
+    "other.service.OrderOtherServiceImpl.checkSecurityAboutOrder": [
+    ],
+    "contacts.service.ContactsServiceImpl.findContactsById": [
+        "contacts.service.ContactsServiceImpl.findContactsByAccountId"
+    ],
+    "travel2.service.TravelServiceImpl.getTripAllDetailInfo": [
+    ],
+    "seat.service.SeatServiceImpl.distributeSeat": [
+        "rebook.service.RebookServiceImpl.updateOrder"
+    ],
+    "other.service.OrderOtherServiceImpl.create": [
+        "contacts.service.ContactsServiceImpl.findContactsByAccountId",
+        "seat.service.SeatServiceImpl.distributeSeat"
+    ],
+    "foodsearch.service.FoodServiceImpl.createFoodOrder": [
+        "preserve.service.PreserveServiceImpl.preserve",
+        "order.service.OrderServiceImpl.create",
+        "preserveOther.service.PreserveOtherServiceImpl.preserve",
+        "other.service.OrderOtherServiceImpl.create"
+    ],
+    "consign.service.ConsignServiceImpl.insertConsignRecord": [
+        "contacts.service.ContactsServiceImpl.findContactsByAccountId"
+    ],
+    "consignprice.service.ConsignPriceServiceImpl.getPriceByWeightAndRegion": [],
+    "user.service.impl.UserServiceImpl.findByUserId": [
+    ],
+    "assurance.service.AssuranceServiceImpl.create": [
+        "order.service.OrderServiceImpl.create",
+        "order.service.OrderServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh"
+    ],
+    "food.service.StationFoodServiceImpl.getFoodStoresByStationNames": [
+        "foodsearch.service.FoodServiceImpl.createFoodOrder",
+        "foodsearch.service.FoodServiceImpl.getAllFood"
+    ],
+    "preserve.service.PreserveServiceImpl.preserve": [
+        "contacts.service.ContactsServiceImpl.findContactsByAccountId"
+    ],
+    "order.service.OrderServiceImpl.create": [
+        "contacts.service.ContactsServiceImpl.findContactsByAccountId",
+        "seat.service.SeatServiceImpl.distributeSeat",
+        "user.service.impl.UserServiceImpl.findByUserId"
+    ],
+    "consign.service.ConsignServiceImpl.queryByOrderId": [
+    ],
+    "consign.service.ConsignServiceImpl.updateConsignRecord": [
+        "order.service.OrderServiceImpl.queryOrdersForRefresh",
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.getOrderById"
+    ],
+    "inside_payment.service.InsidePaymentServiceImpl.pay": [
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.queryOrdersForRefresh"
+    ],
+    "com.trainticket.service.PaymentServiceImpl.pay": [
+        "order.service.OrderServiceImpl.getOrderById",
+        "user.service.impl.UserServiceImpl.findByUserId"
+    ],
+    "cancel.service.CancelServiceImpl.calculateRefund": [
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.getOrderById"
+    ],
+    "cancel.service.CancelServiceImpl.cancelOrder": [
+        "order.service.OrderServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.getOrderById"
+    ],
+    "order.service.OrderServiceImpl.saveChanges": [
+        "order.service.OrderServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.getOrderById",
+        "rebook.service.RebookServiceImpl.updateOrder"
+    ],
+    "inside_payment.service.InsidePaymentServiceImpl.drawBack": [
+        "order.service.OrderServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+        "user.service.impl.UserServiceImpl.findByUserId",
+        "order.service.OrderServiceImpl.getOrderById"
+    ],
+    "rebook.service.RebookServiceImpl.rebook": [
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.queryOrdersForRefresh",
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.queryOrders"
+    ],
+    "inside_payment.service.InsidePaymentServiceImpl.addMoney": [],
+    "rebook.service.RebookServiceImpl.updateOrder": [
+        "seat.service.SeatServiceImpl.distributeSeat"
+    ],
+    "other.service.OrderOtherServiceImpl.saveChanges": [
+        "order.service.OrderServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.getOrderById"
+    ],
+    "contacts.service.ContactsServiceImpl.create": [
+        "contacts.service.ContactsServiceImpl.findContactsByAccountId"
+    ],
+    "rebook.service.RebookServiceImpl.payDifference": [
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh"
+    ],
+    "rebook.service.RebookServiceImpl.payDifferentMoney": [
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.queryOrdersForRefresh"
+    ],
+    "inside_payment.service.InsidePaymentServiceImpl.payDifference": [
+        "other.service.OrderOtherServiceImpl.queryOrders",
+        "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+        "order.service.OrderServiceImpl.queryOrders",
+        "order.service.OrderServiceImpl.queryOrdersForRefresh"
+    ]
+}

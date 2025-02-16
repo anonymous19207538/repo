@@ -1,0 +1,2900 @@
+{
+  "name": "train-ticket",
+  "apis": [
+    {
+      "name": "rebook.service.RebookServiceImpl.payDifference",
+      "def_req": "RebookInfo info, HttpHeaders httpHeaders\n\n\nclass RebookInfo {\n    String loginId;\n    String orderId;\n    String oldTripId;\n    String tripId;\n    int seatType;\n    String date;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "httpHeaders"
+      ],
+      "controller_path": "rebook.controller.RebookController.payDifference",
+      "url_path": "/api/v1/rebookservice/rebook/difference",
+      "req_method": "post"
+    },
+    {
+      "name": "rebook.service.RebookServiceImpl.rebook",
+      "def_req": "RebookInfo info, HttpHeaders httpHeaders\n\n\nclass RebookInfo {\n    String loginId;\n    String orderId;\n    String oldTripId;\n    String tripId;\n    int seatType;\n    String date;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "httpHeaders"
+      ],
+      "controller_path": "rebook.controller.RebookController.rebook",
+      "url_path": "/api/v1/rebookservice/rebook",
+      "req_method": "post"
+    },
+    {
+      "name": "food.service.StationFoodServiceImpl.listFoodStores",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "food.controller.StationFoodController.getAllFoodStores",
+      "url_path": "/api/v1/stationfoodservice/stationfoodstores",
+      "req_method": "get"
+    },
+    {
+      "name": "food.service.StationFoodServiceImpl.listFoodStoresByStationName",
+      "def_req": "String stationName, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "stationName",
+        "headers"
+      ],
+      "controller_path": "food.controller.StationFoodController.getFoodStoresOfStation",
+      "url_path": "/api/v1/stationfoodservice/stationfoodstores/{stationId}",
+      "req_method": "get"
+    },
+    {
+      "name": "food.service.StationFoodServiceImpl.getFoodStoresByStationNames",
+      "def_req": "List<String> stationNames\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "stationNames"
+      ],
+      "controller_path": "food.controller.StationFoodController.getFoodStoresByStationNames",
+      "url_path": "/api/v1/stationfoodservice/stationfoodstores",
+      "req_method": "post"
+    },
+    {
+      "name": "food.service.StationFoodServiceImpl.getStaionFoodStoreById",
+      "def_req": "String id\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "id"
+      ],
+      "controller_path": "food.controller.StationFoodController.getFoodListByStationFoodStoreId",
+      "url_path": "/api/v1/stationfoodservice/stationfoodstores/bystoreid/{stationFoodStoreId}",
+      "req_method": "get"
+    },
+    {
+      "name": "trainFood.service.TrainFoodServiceImpl.listTrainFood",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "trainFood.controller.TrainFoodController.getAllTrainFood",
+      "url_path": "/api/v1/trainfoodservice/trainfoods",
+      "req_method": "get"
+    },
+    {
+      "name": "trainFood.service.TrainFoodServiceImpl.listTrainFoodByTripId",
+      "def_req": "String tripId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "tripId",
+        "headers"
+      ],
+      "controller_path": "trainFood.controller.TrainFoodController.getTrainFoodOfTrip",
+      "url_path": "/api/v1/trainfoodservice/trainfoods/{tripId}",
+      "req_method": "get"
+    },
+    {
+      "name": "security.service.SecurityServiceImpl.findAllSecurityConfig",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "security.controller.SecurityController.findAllSecurityConfig",
+      "url_path": "/api/v1/securityservice/securityConfigs",
+      "req_method": "get"
+    },
+    {
+      "name": "security.service.SecurityServiceImpl.addNewSecurityConfig",
+      "def_req": "SecurityConfig info, HttpHeaders headers\n\n\nclass SecurityConfig {\n    String id;\n    String name;\n    String value;\n    String description;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "security.controller.SecurityController.create",
+      "url_path": "/api/v1/securityservice/securityConfigs",
+      "req_method": "post"
+    },
+    {
+      "name": "security.service.SecurityServiceImpl.modifySecurityConfig",
+      "def_req": "SecurityConfig info, HttpHeaders headers\n\n\nclass SecurityConfig {\n    String id;\n    String name;\n    String value;\n    String description;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "security.controller.SecurityController.update",
+      "url_path": "/api/v1/securityservice/securityConfigs",
+      "req_method": "put"
+    },
+    {
+      "name": "security.service.SecurityServiceImpl.deleteSecurityConfig",
+      "def_req": "String id, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "id",
+        "headers"
+      ],
+      "controller_path": "security.controller.SecurityController.delete",
+      "url_path": "/api/v1/securityservice/securityConfigs/{id}",
+      "req_method": "delete"
+    },
+    {
+      "name": "security.service.SecurityServiceImpl.check",
+      "def_req": "String accountId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "accountId",
+        "headers"
+      ],
+      "controller_path": "security.controller.SecurityController.check",
+      "url_path": "/api/v1/securityservice/securityConfigs/{accountId}",
+      "req_method": "get"
+    },
+    {
+      "name": "plan.service.RoutePlanServiceImpl.searchCheapestResult",
+      "def_req": "RoutePlanInfo info, HttpHeaders headers\n\n\nclass RoutePlanInfo {\n    String startStation;\n    String endStation;\n    String travelDate;\n    int num;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "plan.controller.RoutePlanController.getCheapestRoutes",
+      "url_path": "/api/v1/routeplanservice/routePlan/cheapestRoute",
+      "req_method": "post"
+    },
+    {
+      "name": "plan.service.RoutePlanServiceImpl.searchQuickestResult",
+      "def_req": "RoutePlanInfo info, HttpHeaders headers\n\n\nclass RoutePlanInfo {\n    String startStation;\n    String endStation;\n    String travelDate;\n    int num;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "plan.controller.RoutePlanController.getQuickestRoutes",
+      "url_path": "/api/v1/routeplanservice/routePlan/quickestRoute",
+      "req_method": "post"
+    },
+    {
+      "name": "plan.service.RoutePlanServiceImpl.searchMinStopStations",
+      "def_req": "RoutePlanInfo info, HttpHeaders headers\n\n\nclass RoutePlanInfo {\n    String startStation;\n    String endStation;\n    String travelDate;\n    int num;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "plan.controller.RoutePlanController.getMinStopStations",
+      "url_path": "/api/v1/routeplanservice/routePlan/minStopStations",
+      "req_method": "post"
+    },
+    {
+      "name": "route.service.RouteServiceImpl.createAndModify",
+      "def_req": "RouteInfo info, HttpHeaders headers\n\n\nclass RouteInfo {\n    String Id;\n    String startStation;\n    String endStation;\n    String stationList;\n    String distanceList;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "route.controller.RouteController.createAndModifyRoute",
+      "url_path": "/api/v1/routeservice/routes",
+      "req_method": "post"
+    },
+    {
+      "name": "route.service.RouteServiceImpl.deleteRoute",
+      "def_req": "String routeId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "routeId",
+        "headers"
+      ],
+      "controller_path": "route.controller.RouteController.deleteRoute",
+      "url_path": "/api/v1/routeservice/routes/{routeId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "route.service.RouteServiceImpl.getRouteById",
+      "def_req": "String routeId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "routeId",
+        "headers"
+      ],
+      "controller_path": "route.controller.RouteController.queryById",
+      "url_path": "/api/v1/routeservice/routes/{routeId}",
+      "req_method": "get"
+    },
+    {
+      "name": "route.service.RouteServiceImpl.getRouteByIds",
+      "def_req": "List<String> routeIds, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "routeIds",
+        "headers"
+      ],
+      "controller_path": "route.controller.RouteController.queryByIds",
+      "url_path": "/api/v1/routeservice/routes/byIds",
+      "req_method": "post"
+    },
+    {
+      "name": "route.service.RouteServiceImpl.getAllRoutes",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "route.controller.RouteController.queryAll",
+      "url_path": "/api/v1/routeservice/routes",
+      "req_method": "get"
+    },
+    {
+      "name": "route.service.RouteServiceImpl.getRouteByStartAndEnd",
+      "def_req": "String startId, String terminalId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "startId",
+        "terminalId",
+        "headers"
+      ],
+      "controller_path": "route.controller.RouteController.queryByStartAndTerminal",
+      "url_path": "/api/v1/routeservice/routes/{start}/{end}",
+      "req_method": "get"
+    },
+    {
+      "name": "config.service.ConfigServiceImpl.queryAll",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "config.controller.ConfigController.queryAll",
+      "url_path": "/api/v1/configservice/configs",
+      "req_method": "get"
+    },
+    {
+      "name": "config.service.ConfigServiceImpl.create",
+      "def_req": "Config info, HttpHeaders headers\n\n\nclass Config {\n    String name;\n    String value;\n    String description;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "config.controller.ConfigController.createConfig",
+      "url_path": "/api/v1/configservice/configs",
+      "req_method": "post"
+    },
+    {
+      "name": "config.service.ConfigServiceImpl.update",
+      "def_req": "Config info, HttpHeaders headers\n\n\nclass Config {\n    String name;\n    String value;\n    String description;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "config.controller.ConfigController.updateConfig",
+      "url_path": "/api/v1/configservice/configs",
+      "req_method": "put"
+    },
+    {
+      "name": "config.service.ConfigServiceImpl.delete",
+      "def_req": "String name, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "name",
+        "headers"
+      ],
+      "controller_path": "config.controller.ConfigController.deleteConfig",
+      "url_path": "/api/v1/configservice/configs/{configName}",
+      "req_method": "delete"
+    },
+    {
+      "name": "config.service.ConfigServiceImpl.query",
+      "def_req": "String name, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "name",
+        "headers"
+      ],
+      "controller_path": "config.controller.ConfigController.retrieve",
+      "url_path": "/api/v1/configservice/configs/{configName}",
+      "req_method": "get"
+    },
+    {
+      "name": "train.service.TrainServiceImpl.create",
+      "def_req": "TrainType trainType, HttpHeaders headers\n\n\nclass TrainType {\n    String id;\n    String name;\n    int economyClass;\n    int confortClass;\n    int averageSpeed;\n}",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "trainType",
+        "headers"
+      ],
+      "controller_path": "train.controller.TrainController.create",
+      "url_path": "/api/v1/trainservice/trains",
+      "req_method": "post"
+    },
+    {
+      "name": "train.service.TrainServiceImpl.retrieve",
+      "def_req": "String id, HttpHeaders headers\n",
+      "def_resp": "TrainType\n\n\nclass TrainType {\n    String id;\n    String name;\n    int economyClass;\n    int confortClass;\n    int averageSpeed;\n}",
+      "src": null,
+      "argument_names": [
+        "id",
+        "headers"
+      ],
+      "controller_path": "train.controller.TrainController.retrieve",
+      "url_path": "/api/v1/trainservice/trains/{id}",
+      "req_method": "get"
+    },
+    {
+      "name": "train.service.TrainServiceImpl.retrieveByName",
+      "def_req": "String name, HttpHeaders headers\n",
+      "def_resp": "TrainType\n\n\nclass TrainType {\n    String id;\n    String name;\n    int economyClass;\n    int confortClass;\n    int averageSpeed;\n}",
+      "src": null,
+      "argument_names": [
+        "name",
+        "headers"
+      ],
+      "controller_path": "train.controller.TrainController.retrieveByName",
+      "url_path": "/api/v1/trainservice/trains/byName/{name}",
+      "req_method": "get"
+    },
+    {
+      "name": "train.service.TrainServiceImpl.retrieveByNames",
+      "def_req": "List<String> names, HttpHeaders headers\n",
+      "def_resp": "List<TrainType>\n\n\nclass TrainType {\n    String id;\n    String name;\n    int economyClass;\n    int confortClass;\n    int averageSpeed;\n}",
+      "src": null,
+      "argument_names": [
+        "names",
+        "headers"
+      ],
+      "controller_path": "train.controller.TrainController.retrieveByName",
+      "url_path": "/api/v1/trainservice/trains/byNames",
+      "req_method": "post"
+    },
+    {
+      "name": "train.service.TrainServiceImpl.update",
+      "def_req": "TrainType trainType, HttpHeaders headers\n\n\nclass TrainType {\n    String id;\n    String name;\n    int economyClass;\n    int confortClass;\n    int averageSpeed;\n}",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "trainType",
+        "headers"
+      ],
+      "controller_path": "train.controller.TrainController.update",
+      "url_path": "/api/v1/trainservice/trains",
+      "req_method": "put"
+    },
+    {
+      "name": "train.service.TrainServiceImpl.delete",
+      "def_req": "String id, HttpHeaders headers\n",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "id",
+        "headers"
+      ],
+      "controller_path": "train.controller.TrainController.delete",
+      "url_path": "/api/v1/trainservice/trains/{id}",
+      "req_method": "delete"
+    },
+    {
+      "name": "train.service.TrainServiceImpl.query",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "List<TrainType>\n\n\nclass TrainType {\n    String id;\n    String name;\n    int economyClass;\n    int confortClass;\n    int averageSpeed;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "train.controller.TrainController.query",
+      "url_path": "/api/v1/trainservice/trains",
+      "req_method": "get"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.getTrainTypeByTripId",
+      "def_req": "String tripId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "tripId",
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.getTrainTypeByTripId",
+      "url_path": "/api/v1/travelservice/train_types/{tripId}",
+      "req_method": "get"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.getRouteByTripId",
+      "def_req": "String tripId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "tripId",
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.getRouteByTripId",
+      "url_path": "/api/v1/travelservice/routes/{tripId}",
+      "req_method": "get"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.getTripByRoute",
+      "def_req": "ArrayList<String> routeIds, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "routeIds",
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.getTripsByRouteId",
+      "url_path": "/api/v1/travelservice/trips/routes",
+      "req_method": "post"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.create",
+      "def_req": "TravelInfo info, HttpHeaders headers\n\n\nclass TravelInfo {\n    String loginId;\n    String tripId;\n    String trainTypeName;\n    String routeId;\n    String startStationName;\n    String stationsName;\n    String terminalStationName;\n    String startTime;\n    String endTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.createTrip",
+      "url_path": "/api/v1/travelservice/trips",
+      "req_method": "post"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.retrieve",
+      "def_req": "String tripId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "tripId",
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.retrieve",
+      "url_path": "/api/v1/travelservice/trips/{tripId}",
+      "req_method": "get"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.update",
+      "def_req": "TravelInfo info, HttpHeaders headers\n\n\nclass TravelInfo {\n    String loginId;\n    String tripId;\n    String trainTypeName;\n    String routeId;\n    String startStationName;\n    String stationsName;\n    String terminalStationName;\n    String startTime;\n    String endTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.updateTrip",
+      "url_path": "/api/v1/travelservice/trips",
+      "req_method": "put"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.delete",
+      "def_req": "String tripId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "tripId",
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.deleteTrip",
+      "url_path": "/api/v1/travelservice/trips/{tripId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.queryByBatch",
+      "def_req": "TripInfo info, HttpHeaders headers\n\n\nclass TripInfo {\n    String startPlace;\n    String endPlace;\n    String departureTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.queryInfo",
+      "url_path": "/api/v1/travelservice/trips/left",
+      "req_method": "post"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.queryInParallel",
+      "def_req": "TripInfo info, HttpHeaders headers\n\n\nclass TripInfo {\n    String startPlace;\n    String endPlace;\n    String departureTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.queryInfoInparallel",
+      "url_path": "/api/v1/travelservice/trips/left_parallel",
+      "req_method": "post"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.getTripAllDetailInfo",
+      "def_req": "TripAllDetailInfo gtdi, HttpHeaders headers\n\n\nclass TripAllDetailInfo {\n    String tripId;\n    String travelDate;\n    String from;\n    String to;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "gtdi",
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.getTripAllDetailInfo",
+      "url_path": "/api/v1/travelservice/trip_detail",
+      "req_method": "post"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.queryAll",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.queryAll",
+      "url_path": "/api/v1/travelservice/trips",
+      "req_method": "get"
+    },
+    {
+      "name": "travel.service.TravelServiceImpl.adminQueryAll",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "travel.controller.TravelController.adminQueryAll",
+      "url_path": "/api/v1/travelservice/admin_trip",
+      "req_method": "get"
+    },
+    {
+      "name": "travelplan.service.TravelPlanServiceImpl.getTransferSearch",
+      "def_req": "TransferTravelInfo info, HttpHeaders headers\n\n\nclass TransferTravelInfo {\n    String startStation;\n    String viaStation;\n    String endStation;\n    String travelDate;\n    String trainType;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "travelplan.controller.TravelPlanController.getTransferResult",
+      "url_path": "/api/v1/travelplanservice/travelPlan/transferResult",
+      "req_method": "post"
+    },
+    {
+      "name": "travelplan.service.TravelPlanServiceImpl.getCheapest",
+      "def_req": "TripInfo info, HttpHeaders headers\n\n\nclass TripInfo {\n    String startPlace;\n    String endPlace;\n    String departureTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "travelplan.controller.TravelPlanController.getByCheapest",
+      "url_path": "/api/v1/travelplanservice/travelPlan/cheapest",
+      "req_method": "post"
+    },
+    {
+      "name": "travelplan.service.TravelPlanServiceImpl.getQuickest",
+      "def_req": "TripInfo info, HttpHeaders headers\n\n\nclass TripInfo {\n    String startPlace;\n    String endPlace;\n    String departureTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "travelplan.controller.TravelPlanController.getByQuickest",
+      "url_path": "/api/v1/travelplanservice/travelPlan/quickest",
+      "req_method": "post"
+    },
+    {
+      "name": "travelplan.service.TravelPlanServiceImpl.getMinStation",
+      "def_req": "TripInfo info, HttpHeaders headers\n\n\nclass TripInfo {\n    String startPlace;\n    String endPlace;\n    String departureTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "travelplan.controller.TravelPlanController.getByMinStation",
+      "url_path": "/api/v1/travelplanservice/travelPlan/minStation",
+      "req_method": "post"
+    },
+    {
+      "name": "waitorder.service.Impl.WaitListOrderServiceImpl.create",
+      "def_req": "WaitListOrderVO orderVO, HttpHeaders headers\n\n\nclass WaitListOrderVO {\n    String accountId;\n    String contactsId;\n    String tripId;\n    int seatType;\n    String date;\n    String from;\n    String to;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderVO",
+        "headers"
+      ],
+      "controller_path": "waitorder.controller.WaitListOrderController.createNewOrder",
+      "url_path": "/api/v1/waitorderservice/order",
+      "req_method": "post"
+    },
+    {
+      "name": "waitorder.service.Impl.WaitListOrderServiceImpl.getAllOrders",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "waitorder.controller.WaitListOrderController.getAllOrders",
+      "url_path": "/api/v1/waitorderservice/orders",
+      "req_method": "get"
+    },
+    {
+      "name": "waitorder.service.Impl.WaitListOrderServiceImpl.getAllWaitListOrders",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "waitorder.controller.WaitListOrderController.getWaitListOrders",
+      "url_path": "/api/v1/waitorderservice/waitlistorders",
+      "req_method": "get"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.getSoldTickets",
+      "def_req": "Seat seatRequest, HttpHeaders headers\n\n\nclass Seat {\n    String travelDate;\n    String trainNumber;\n    String startStation;\n    String destStation;\n    int seatType;\n    int totalNum;\n    List<String> stations;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "seatRequest",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.getTicketListByDateAndTripId",
+      "url_path": "/api/v1/orderservice/order/tickets",
+      "req_method": "post"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.create",
+      "def_req": "Order order, HttpHeaders headers\n\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "order",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.createNewOrder",
+      "url_path": "/api/v1/orderservice/order",
+      "req_method": "post"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.addNewOrder",
+      "def_req": "Order order, HttpHeaders headers\n\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "order",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.addcreateNewOrder",
+      "url_path": "/api/v1/orderservice/order/admin",
+      "req_method": "post"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.queryOrders",
+      "def_req": "OrderInfo qi, String accountId, HttpHeaders headers\n\n\nclass OrderInfo {\n    String loginId;\n    String travelDateStart;\n    String travelDateEnd;\n    String boughtDateStart;\n    String boughtDateEnd;\n    int state;\n    boolean enableTravelDateQuery;\n    boolean enableBoughtDateQuery;\n    boolean enableStateQuery;\n}",
+      "def_resp": "Response<ArrayList<Order>>\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n}",
+      "src": null,
+      "argument_names": [
+        "qi",
+        "accountId",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.queryOrders",
+      "url_path": "/api/v1/orderservice/order/query",
+      "req_method": "post"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.queryOrdersForRefresh",
+      "def_req": "OrderInfo qi, String accountId, HttpHeaders headers\n\n\nclass OrderInfo {\n    String loginId;\n    String travelDateStart;\n    String travelDateEnd;\n    String boughtDateStart;\n    String boughtDateEnd;\n    int state;\n    boolean enableTravelDateQuery;\n    boolean enableBoughtDateQuery;\n    boolean enableStateQuery;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "qi",
+        "accountId",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.queryOrdersForRefresh",
+      "url_path": "/api/v1/orderservice/order/refresh",
+      "req_method": "post"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.queryAlreadySoldOrders",
+      "def_req": "Date travelDate, String trainNumber, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "travelDate",
+        "trainNumber",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.calculateSoldTicket",
+      "url_path": "/api/v1/orderservice/order/{travelDate}/{trainNumber}",
+      "req_method": "get"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.getOrderPrice",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.getOrderPrice",
+      "url_path": "/api/v1/orderservice/order/price/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.payOrder",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.payOrder",
+      "url_path": "/api/v1/orderservice/order/orderPay/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.getOrderById",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.getOrderById",
+      "url_path": "/api/v1/orderservice/order/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.modifyOrder",
+      "def_req": "String orderId, int status, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "status",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.modifyOrder",
+      "url_path": "/api/v1/orderservice/order/status/{orderId}/{status}",
+      "req_method": "get"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.checkSecurityAboutOrder",
+      "def_req": "Date dateFrom, String accountId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "dateFrom",
+        "accountId",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.securityInfoCheck",
+      "url_path": "/api/v1/orderservice/order/security/{checkDate}/{accountId}",
+      "req_method": "get"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.saveChanges",
+      "def_req": "Order order, HttpHeaders headers\n\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "order",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.saveOrderInfo",
+      "url_path": "/api/v1/orderservice/order",
+      "req_method": "put"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.updateOrder",
+      "def_req": "Order order, HttpHeaders headers\n\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "order",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.updateOrder",
+      "url_path": "/api/v1/orderservice/order/admin",
+      "req_method": "put"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.deleteOrder",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.deleteOrder",
+      "url_path": "/api/v1/orderservice/order/{orderId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "order.service.OrderServiceImpl.getAllOrders",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "order.controller.OrderController.findAllOrder",
+      "url_path": "/api/v1/orderservice/order",
+      "req_method": "get"
+    },
+    {
+      "name": "verifycode.service.impl.VerifyCodeServiceImpl.getImageCode",
+      "def_req": "int width, int height, OutputStream os, HttpServletRequest request, HttpServletResponse response, HttpHeaders headers\n",
+      "def_resp": "Map<String, Object>\n",
+      "src": null,
+      "argument_names": [
+        "width",
+        "height",
+        "os",
+        "request",
+        "response",
+        "headers"
+      ],
+      "controller_path": "verifycode.controller.VerifyCodeController.imageCode",
+      "url_path": "/api/v1/verifycode/generate",
+      "req_method": "get"
+    },
+    {
+      "name": "verifycode.service.impl.VerifyCodeServiceImpl.verifyCode",
+      "def_req": "HttpServletRequest request, HttpServletResponse response, String receivedCode, HttpHeaders headers\n",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "request",
+        "response",
+        "receivedCode",
+        "headers"
+      ],
+      "controller_path": "verifycode.controller.VerifyCodeController.verifyCode",
+      "url_path": "/api/v1/verifycode/verify/{verifyCode}",
+      "req_method": "get"
+    },
+    {
+      "name": "inside_payment.service.InsidePaymentServiceImpl.pay",
+      "def_req": "PaymentInfo info, HttpHeaders headers\n\n\nclass PaymentInfo {\n    String userId;\n    String orderId;\n    String tripId;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "inside_payment.controller.InsidePaymentController.pay",
+      "url_path": "/api/v1/inside_pay_service/inside_payment",
+      "req_method": "post"
+    },
+    {
+      "name": "inside_payment.service.InsidePaymentServiceImpl.createAccount",
+      "def_req": "AccountInfo info, HttpHeaders headers\n\n\nclass AccountInfo {\n    String userId;\n    String money;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "inside_payment.controller.InsidePaymentController.createAccount",
+      "url_path": "/api/v1/inside_pay_service/inside_payment/account",
+      "req_method": "post"
+    },
+    {
+      "name": "inside_payment.service.InsidePaymentServiceImpl.addMoney",
+      "def_req": "String userId, String money, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "userId",
+        "money",
+        "headers"
+      ],
+      "controller_path": "inside_payment.controller.InsidePaymentController.addMoney",
+      "url_path": "/api/v1/inside_pay_service/inside_payment/{userId}/{money}",
+      "req_method": "get"
+    },
+    {
+      "name": "inside_payment.service.InsidePaymentServiceImpl.queryPayment",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "inside_payment.controller.InsidePaymentController.queryPayment",
+      "url_path": "/api/v1/inside_pay_service/inside_payment/payment",
+      "req_method": "get"
+    },
+    {
+      "name": "inside_payment.service.InsidePaymentServiceImpl.queryAccount",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "inside_payment.controller.InsidePaymentController.queryAccount",
+      "url_path": "/api/v1/inside_pay_service/inside_payment/account",
+      "req_method": "get"
+    },
+    {
+      "name": "inside_payment.service.InsidePaymentServiceImpl.drawBack",
+      "def_req": "String userId, String money, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "userId",
+        "money",
+        "headers"
+      ],
+      "controller_path": "inside_payment.controller.InsidePaymentController.drawBack",
+      "url_path": "/api/v1/inside_pay_service/inside_payment/drawback/{userId}/{money}",
+      "req_method": "get"
+    },
+    {
+      "name": "inside_payment.service.InsidePaymentServiceImpl.payDifference",
+      "def_req": "PaymentInfo info, HttpHeaders headers\n\n\nclass PaymentInfo {\n    String userId;\n    String orderId;\n    String tripId;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "inside_payment.controller.InsidePaymentController.payDifference",
+      "url_path": "/api/v1/inside_pay_service/inside_payment/difference",
+      "req_method": "post"
+    },
+    {
+      "name": "inside_payment.service.InsidePaymentServiceImpl.queryAddMoney",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "inside_payment.controller.InsidePaymentController.queryAddMoney",
+      "url_path": "/api/v1/inside_pay_service/inside_payment/money",
+      "req_method": "get"
+    },
+    {
+      "name": "preserveOther.service.PreserveOtherServiceImpl.preserve",
+      "def_req": "OrderTicketsInfo oti, HttpHeaders httpHeaders\n\n\nclass OrderTicketsInfo {\n    String accountId;\n    String contactsId;\n    String tripId;\n    int seatType;\n    String loginToken;\n    String date;\n    String from;\n    String to;\n    int assurance;\n    int foodType;\n    String stationName;\n    String storeName;\n    String foodName;\n    double foodPrice;\n    String handleDate;\n    String consigneeName;\n    String consigneePhone;\n    double consigneeWeight;\n    boolean isWithin;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "oti",
+        "httpHeaders"
+      ],
+      "controller_path": "preserveOther.controller.PreserveOtherController.preserve",
+      "url_path": "/api/v1/preserveotherservice/preserveOther",
+      "req_method": "post"
+    },
+    {
+      "name": "fdse.microservice.service.BasicServiceImpl.queryForTravel",
+      "def_req": "Travel info, HttpHeaders headers\n\n\nclass Travel {\n    Trip trip;\n    String startPlace;\n    String endPlace;\n    String departureTime;\n}\n\nclass Trip {\n    String id;\n    TripId tripId;\n    String trainTypeName;\n    String routeId;\n    String startStationName;\n    String stationsName;\n    String terminalStationName;\n    String startTime;\n    String endTime;\n}\n\nclass TripId {\n    Type type;\n    String number;\n}\n\nenum Type { G, D, Z, T, K }",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "fdse.microservice.controller.BasicController.queryForTravel",
+      "url_path": "/api/v1/basicservice/basic/travel",
+      "req_method": "post"
+    },
+    {
+      "name": "fdse.microservice.service.BasicServiceImpl.queryForTravels",
+      "def_req": "List<Travel> infos, HttpHeaders headers\n\n\nclass Travel {\n    Trip trip;\n    String startPlace;\n    String endPlace;\n    String departureTime;\n}\n\nclass Trip {\n    String id;\n    TripId tripId;\n    String trainTypeName;\n    String routeId;\n    String startStationName;\n    String stationsName;\n    String terminalStationName;\n    String startTime;\n    String endTime;\n}\n\nclass TripId {\n    Type type;\n    String number;\n}\n\nenum Type { G, D, Z, T, K }",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "infos",
+        "headers"
+      ],
+      "controller_path": "fdse.microservice.controller.BasicController.queryForTravels",
+      "url_path": "/api/v1/basicservice/basic/travels",
+      "req_method": "post"
+    },
+    {
+      "name": "fdse.microservice.service.BasicServiceImpl.queryForStationId",
+      "def_req": "String stationName, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "stationName",
+        "headers"
+      ],
+      "controller_path": "fdse.microservice.controller.BasicController.queryForStationId",
+      "url_path": "/api/v1/basicservice/basic/{stationName}",
+      "req_method": "get"
+    },
+    {
+      "name": "fdse.microservice.service.StationServiceImpl.query",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "fdse.microservice.controller.StationController.query",
+      "url_path": "/api/v1/stationservice/stations",
+      "req_method": "get"
+    },
+    {
+      "name": "fdse.microservice.service.StationServiceImpl.create",
+      "def_req": "Station station, HttpHeaders headers\n\n\nclass Station {\n    String id;\n    String name;\n    int stayTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "station",
+        "headers"
+      ],
+      "controller_path": "fdse.microservice.controller.StationController.create",
+      "url_path": "/api/v1/stationservice/stations",
+      "req_method": "post"
+    },
+    {
+      "name": "fdse.microservice.service.StationServiceImpl.update",
+      "def_req": "Station info, HttpHeaders headers\n\n\nclass Station {\n    String id;\n    String name;\n    int stayTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "fdse.microservice.controller.StationController.update",
+      "url_path": "/api/v1/stationservice/stations",
+      "req_method": "put"
+    },
+    {
+      "name": "fdse.microservice.service.StationServiceImpl.delete",
+      "def_req": "String stationsId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "stationsId",
+        "headers"
+      ],
+      "controller_path": "fdse.microservice.controller.StationController.delete",
+      "url_path": "/api/v1/stationservice/stations/{stationsId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "fdse.microservice.service.StationServiceImpl.queryForId",
+      "def_req": "String stationName, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "stationName",
+        "headers"
+      ],
+      "controller_path": "fdse.microservice.controller.StationController.queryForStationId",
+      "url_path": "/api/v1/stationservice/stations/id/{stationNameForId}",
+      "req_method": "get"
+    },
+    {
+      "name": "fdse.microservice.service.StationServiceImpl.queryForIdBatch",
+      "def_req": "List<String> nameList, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "nameList",
+        "headers"
+      ],
+      "controller_path": "fdse.microservice.controller.StationController.queryForIdBatch",
+      "url_path": "/api/v1/stationservice/stations/idlist",
+      "req_method": "post"
+    },
+    {
+      "name": "fdse.microservice.service.StationServiceImpl.queryById",
+      "def_req": "String stationId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "stationId",
+        "headers"
+      ],
+      "controller_path": "fdse.microservice.controller.StationController.queryById",
+      "url_path": "/api/v1/stationservice/stations/name/{stationIdForName}",
+      "req_method": "get"
+    },
+    {
+      "name": "fdse.microservice.service.StationServiceImpl.queryByIdBatch",
+      "def_req": "List<String> idList, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "idList",
+        "headers"
+      ],
+      "controller_path": "fdse.microservice.controller.StationController.queryForNameBatch",
+      "url_path": "/api/v1/stationservice/stations/namelist",
+      "req_method": "post"
+    },
+    {
+      "name": "travel2.service.TravelServiceImpl.getTrainTypeByTripId",
+      "def_req": "String tripId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "tripId",
+        "headers"
+      ],
+      "controller_path": "travel2.controller.Travel2Controller.getTrainTypeByTripId",
+      "url_path": "/api/v1/travel2service/train_types/{tripId}",
+      "req_method": "get"
+    },
+    {
+      "name": "travel2.service.TravelServiceImpl.getRouteByTripId",
+      "def_req": "String tripId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "tripId",
+        "headers"
+      ],
+      "controller_path": "travel2.controller.Travel2Controller.getRouteByTripId",
+      "url_path": "/api/v1/travel2service/routes/{tripId}",
+      "req_method": "get"
+    },
+    {
+      "name": "travel2.service.TravelServiceImpl.getTripByRoute",
+      "def_req": "ArrayList<String> routeIds, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "routeIds",
+        "headers"
+      ],
+      "controller_path": "travel2.controller.Travel2Controller.getTripsByRouteId",
+      "url_path": "/api/v1/travel2service/trips/routes",
+      "req_method": "post"
+    },
+    {
+      "name": "travel2.service.TravelServiceImpl.create",
+      "def_req": "TravelInfo info, HttpHeaders headers\n\n\nclass TravelInfo {\n    String loginId;\n    String tripId;\n    String trainTypeName;\n    String routeId;\n    String startStationName;\n    String stationsName;\n    String terminalStationName;\n    String startTime;\n    String endTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "travel2.controller.Travel2Controller.createTrip",
+      "url_path": "/api/v1/travel2service/trips",
+      "req_method": "post"
+    },
+    {
+      "name": "travel2.service.TravelServiceImpl.retrieve",
+      "def_req": "String tripId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "tripId",
+        "headers"
+      ],
+      "controller_path": "travel2.controller.Travel2Controller.retrieve",
+      "url_path": "/api/v1/travel2service/trips/{tripId}",
+      "req_method": "get"
+    },
+    {
+      "name": "travel2.service.TravelServiceImpl.update",
+      "def_req": "TravelInfo info, HttpHeaders headers\n\n\nclass TravelInfo {\n    String loginId;\n    String tripId;\n    String trainTypeName;\n    String routeId;\n    String startStationName;\n    String stationsName;\n    String terminalStationName;\n    String startTime;\n    String endTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "travel2.controller.Travel2Controller.updateTrip",
+      "url_path": "/api/v1/travel2service/trips",
+      "req_method": "put"
+    },
+    {
+      "name": "travel2.service.TravelServiceImpl.delete",
+      "def_req": "String tripId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "tripId",
+        "headers"
+      ],
+      "controller_path": "travel2.controller.Travel2Controller.deleteTrip",
+      "url_path": "/api/v1/travel2service/trips/{tripId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "travel2.service.TravelServiceImpl.queryByBatch",
+      "def_req": "TripInfo info, HttpHeaders headers\n\n\nclass TripInfo {\n    String startPlace;\n    String endPlace;\n    String departureTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "travel2.controller.Travel2Controller.queryInfo",
+      "url_path": "/api/v1/travel2service/trips/left",
+      "req_method": "post"
+    },
+    {
+      "name": "travel2.service.TravelServiceImpl.getTripAllDetailInfo",
+      "def_req": "TripAllDetailInfo gtdi, HttpHeaders headers\n\n\nclass TripAllDetailInfo {\n    String tripId;\n    String travelDate;\n    String from;\n    String to;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "gtdi",
+        "headers"
+      ],
+      "controller_path": "travel2.controller.Travel2Controller.getTripAllDetailInfo",
+      "url_path": "/api/v1/travel2service/trip_detail",
+      "req_method": "post"
+    },
+    {
+      "name": "travel2.service.TravelServiceImpl.queryAll",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "travel2.controller.Travel2Controller.queryAll",
+      "url_path": "/api/v1/travel2service/trips",
+      "req_method": "get"
+    },
+    {
+      "name": "travel2.service.TravelServiceImpl.adminQueryAll",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "travel2.controller.Travel2Controller.adminQueryAll",
+      "url_path": "/api/v1/travel2service/admin_trip",
+      "req_method": "get"
+    },
+    {
+      "name": "adminorder.service.AdminOrderServiceImpl.getAllOrders",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "adminorder.controller.AdminOrderController.getAllOrders",
+      "url_path": "/api/v1/adminorderservice/adminorder",
+      "req_method": "get"
+    },
+    {
+      "name": "adminorder.service.AdminOrderServiceImpl.addOrder",
+      "def_req": "Order request, HttpHeaders headers\n\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n    String differenceMoney;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "request",
+        "headers"
+      ],
+      "controller_path": "adminorder.controller.AdminOrderController.addOrder",
+      "url_path": "/api/v1/adminorderservice/adminorder",
+      "req_method": "post"
+    },
+    {
+      "name": "adminorder.service.AdminOrderServiceImpl.updateOrder",
+      "def_req": "Order request, HttpHeaders headers\n\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n    String differenceMoney;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "request",
+        "headers"
+      ],
+      "controller_path": "adminorder.controller.AdminOrderController.updateOrder",
+      "url_path": "/api/v1/adminorderservice/adminorder",
+      "req_method": "put"
+    },
+    {
+      "name": "adminorder.service.AdminOrderServiceImpl.deleteOrder",
+      "def_req": "String orderId, String trainNumber, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "trainNumber",
+        "headers"
+      ],
+      "controller_path": "adminorder.controller.AdminOrderController.deleteOrder",
+      "url_path": "/api/v1/adminorderservice/adminorder/{orderId}/{trainNumber}",
+      "req_method": "delete"
+    },
+    {
+      "name": "contacts.service.ContactsServiceImpl.getAllContacts",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "contacts.controller.ContactsController.getAllContacts",
+      "url_path": "/api/v1/contactservice/contacts",
+      "req_method": "get"
+    },
+    {
+      "name": "contacts.service.ContactsServiceImpl.create",
+      "def_req": "Contacts addContacts, HttpHeaders headers\n\n\nclass Contacts {\n    String id;\n    String accountId;\n    String name;\n    int documentType;\n    String documentNumber;\n    String phoneNumber;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "addContacts",
+        "headers"
+      ],
+      "controller_path": "contacts.controller.ContactsController.createNewContacts",
+      "url_path": "/api/v1/contactservice/contacts",
+      "req_method": "post"
+    },
+    {
+      "name": "contacts.service.ContactsServiceImpl.createContacts",
+      "def_req": "Contacts contacts, HttpHeaders headers\n\n\nclass Contacts {\n    String id;\n    String accountId;\n    String name;\n    int documentType;\n    String documentNumber;\n    String phoneNumber;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "contacts",
+        "headers"
+      ],
+      "controller_path": "contacts.controller.ContactsController.createNewContactsAdmin",
+      "url_path": "/api/v1/contactservice/contacts/admin",
+      "req_method": "post"
+    },
+    {
+      "name": "contacts.service.ContactsServiceImpl.delete",
+      "def_req": "String contactsId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "contactsId",
+        "headers"
+      ],
+      "controller_path": "contacts.controller.ContactsController.deleteContacts",
+      "url_path": "/api/v1/contactservice/contacts/{contactsId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "contacts.service.ContactsServiceImpl.modify",
+      "def_req": "Contacts contacts, HttpHeaders headers\n\n\nclass Contacts {\n    String id;\n    String accountId;\n    String name;\n    int documentType;\n    String documentNumber;\n    String phoneNumber;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "contacts",
+        "headers"
+      ],
+      "controller_path": "contacts.controller.ContactsController.modifyContacts",
+      "url_path": "/api/v1/contactservice/contacts",
+      "req_method": "put"
+    },
+    {
+      "name": "contacts.service.ContactsServiceImpl.findContactsByAccountId",
+      "def_req": "String accountId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "accountId",
+        "headers"
+      ],
+      "controller_path": "contacts.controller.ContactsController.findContactsByAccountId",
+      "url_path": "/api/v1/contactservice/contacts/account/{accountId}",
+      "req_method": "get"
+    },
+    {
+      "name": "contacts.service.ContactsServiceImpl.findContactsById",
+      "def_req": "String id, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "id",
+        "headers"
+      ],
+      "controller_path": "contacts.controller.ContactsController.getContactsByContactsId",
+      "url_path": "/api/v1/contactservice/contacts/{id}",
+      "req_method": "get"
+    },
+    {
+      "name": "adminroute.service.AdminRouteServiceImpl.getAllRoutes",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "adminroute.controller.AdminRouteController.getAllRoutes",
+      "url_path": "/api/v1/adminrouteservice/adminroute",
+      "req_method": "get"
+    },
+    {
+      "name": "adminroute.service.AdminRouteServiceImpl.createAndModifyRoute",
+      "def_req": "RouteInfo request, HttpHeaders headers\n\n\nclass RouteInfo {\n    String loginId;\n    String startStation;\n    String endStation;\n    String stationList;\n    String distanceList;\n    String id;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "request",
+        "headers"
+      ],
+      "controller_path": "adminroute.controller.AdminRouteController.addRoute",
+      "url_path": "/api/v1/adminrouteservice/adminroute",
+      "req_method": "post"
+    },
+    {
+      "name": "adminroute.service.AdminRouteServiceImpl.deleteRoute",
+      "def_req": "String routeId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "routeId",
+        "headers"
+      ],
+      "controller_path": "adminroute.controller.AdminRouteController.deleteRoute",
+      "url_path": "/api/v1/adminrouteservice/adminroute/{routeId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "auth.service.impl.UserServiceImpl.createDefaultAuthUser",
+      "def_req": "AuthDto dto\n\n\nclass AuthDto {\n    String userId;\n    String userName;\n    String password;\n}",
+      "def_resp": "User\n\n\nclass User {\n    String userId;\n    String username;\n    String password;\n    Set<String> roles;\n}",
+      "src": null,
+      "argument_names": [
+        "dto"
+      ],
+      "controller_path": "auth.controller.AuthController.createDefaultUser",
+      "url_path": "/api/v1/auth",
+      "req_method": "post"
+    },
+    {
+      "name": "auth.service.impl.TokenServiceImpl.getToken",
+      "def_req": "BasicAuthDto dto, HttpHeaders headers\n\n\nclass BasicAuthDto {\n    String username;\n    String password;\n    String verificationCode;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "dto",
+        "headers"
+      ],
+      "controller_path": "auth.controller.UserController.getToken",
+      "url_path": "/api/v1/users/login",
+      "req_method": "post"
+    },
+    {
+      "name": "auth.service.impl.UserServiceImpl.getAllUser",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "List<User>\n\n\nclass User {\n    String userId;\n    String username;\n    String password;\n    Set<String> roles;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "auth.controller.UserController.getAllUser",
+      "url_path": "/api/v1/users",
+      "req_method": "get"
+    },
+    {
+      "name": "auth.service.impl.UserServiceImpl.deleteByUserId",
+      "def_req": "String userId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "userId",
+        "headers"
+      ],
+      "controller_path": "auth.controller.UserController.deleteUserById",
+      "url_path": "/api/v1/users/{userId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "com.trainticket.service.PaymentServiceImpl.pay",
+      "def_req": "Payment info, HttpHeaders headers\n\n\nclass Payment {\n    String id;\n    String orderId;\n    String userId;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "com.trainticket.controller.PaymentController.pay",
+      "url_path": "/api/v1/paymentservice/payment",
+      "req_method": "post"
+    },
+    {
+      "name": "com.trainticket.service.PaymentServiceImpl.addMoney",
+      "def_req": "Payment info, HttpHeaders headers\n\n\nclass Payment {\n    String id;\n    String orderId;\n    String userId;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "com.trainticket.controller.PaymentController.addMoney",
+      "url_path": "/api/v1/paymentservice/payment/money",
+      "req_method": "post"
+    },
+    {
+      "name": "com.trainticket.service.PaymentServiceImpl.query",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "com.trainticket.controller.PaymentController.query",
+      "url_path": "/api/v1/paymentservice/payment",
+      "req_method": "get"
+    },
+    {
+      "name": "user.service.impl.UserServiceImpl.getAllUsers",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "user.controller.UserController.getAllUser",
+      "url_path": "/api/v1/userservice/users",
+      "req_method": "get"
+    },
+    {
+      "name": "user.service.impl.UserServiceImpl.findByUserName",
+      "def_req": "String userName, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "userName",
+        "headers"
+      ],
+      "controller_path": "user.controller.UserController.getUserByUserName",
+      "url_path": "/api/v1/userservice/users/{userName}",
+      "req_method": "get"
+    },
+    {
+      "name": "user.service.impl.UserServiceImpl.findByUserId",
+      "def_req": "String userId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "userId",
+        "headers"
+      ],
+      "controller_path": "user.controller.UserController.getUserByUserId",
+      "url_path": "/api/v1/userservice/users/id/{userId}",
+      "req_method": "get"
+    },
+    {
+      "name": "user.service.impl.UserServiceImpl.saveUser",
+      "def_req": "UserDto userDto, HttpHeaders headers\n\n\nclass UserDto {\n    String userId;\n    String userName;\n    String password;\n    int gender;\n    int documentType;\n    String documentNum;\n    String email;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "userDto",
+        "headers"
+      ],
+      "controller_path": "user.controller.UserController.registerUser",
+      "url_path": "/api/v1/userservice/users/register",
+      "req_method": "post"
+    },
+    {
+      "name": "user.service.impl.UserServiceImpl.deleteUser",
+      "def_req": "String userId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "userId",
+        "headers"
+      ],
+      "controller_path": "user.controller.UserController.deleteUserById",
+      "url_path": "/api/v1/userservice/users/{userId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "user.service.impl.UserServiceImpl.updateUser",
+      "def_req": "UserDto userDto, HttpHeaders headers\n\n\nclass UserDto {\n    String userId;\n    String userName;\n    String password;\n    int gender;\n    int documentType;\n    String documentNum;\n    String email;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "userDto",
+        "headers"
+      ],
+      "controller_path": "user.controller.UserController.updateUser",
+      "url_path": "/api/v1/userservice/users",
+      "req_method": "put"
+    },
+    {
+      "name": "consign.service.ConsignServiceImpl.insertConsignRecord",
+      "def_req": "Consign consignRequest, HttpHeaders headers\n\n\nclass Consign {\n    String id;\n    String orderId;\n    String accountId;\n    String handleDate;\n    String targetDate;\n    String from;\n    String to;\n    String consignee;\n    String phone;\n    double weight;\n    boolean isWithin;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "consignRequest",
+        "headers"
+      ],
+      "controller_path": "consign.controller.ConsignController.insertConsign",
+      "url_path": "/api/v1/consignservice/consigns",
+      "req_method": "post"
+    },
+    {
+      "name": "consign.service.ConsignServiceImpl.updateConsignRecord",
+      "def_req": "Consign consignRequest, HttpHeaders headers\n\n\nclass Consign {\n    String id;\n    String orderId;\n    String accountId;\n    String handleDate;\n    String targetDate;\n    String from;\n    String to;\n    String consignee;\n    String phone;\n    double weight;\n    boolean isWithin;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "consignRequest",
+        "headers"
+      ],
+      "controller_path": "consign.controller.ConsignController.updateConsign",
+      "url_path": "/api/v1/consignservice/consigns",
+      "req_method": "put"
+    },
+    {
+      "name": "consign.service.ConsignServiceImpl.queryByAccountId",
+      "def_req": "UUID accountId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "accountId",
+        "headers"
+      ],
+      "controller_path": "consign.controller.ConsignController.findByAccountId",
+      "url_path": "/api/v1/consignservice/consigns/account/{id}",
+      "req_method": "get"
+    },
+    {
+      "name": "consign.service.ConsignServiceImpl.queryByOrderId",
+      "def_req": "UUID orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "consign.controller.ConsignController.findByOrderId",
+      "url_path": "/api/v1/consignservice/consigns/order/{id}",
+      "req_method": "get"
+    },
+    {
+      "name": "consign.service.ConsignServiceImpl.queryByConsignee",
+      "def_req": "String consignee, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "consignee",
+        "headers"
+      ],
+      "controller_path": "consign.controller.ConsignController.findByConsignee",
+      "url_path": "/api/v1/consignservice/consigns/{consignee}",
+      "req_method": "get"
+    },
+    {
+      "name": "preserve.service.PreserveServiceImpl.preserve",
+      "def_req": "OrderTicketsInfo oti, HttpHeaders headers\n\n\nclass OrderTicketsInfo {\n    String accountId;\n    String contactsId;\n    String tripId;\n    int seatType;\n    String loginToken;\n    String date;\n    String from;\n    String to;\n    int assurance;\n    int foodType;\n    String stationName;\n    String storeName;\n    String foodName;\n    double foodPrice;\n    String handleDate;\n    String consigneeName;\n    String consigneePhone;\n    double consigneeWeight;\n    boolean isWithin;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "oti",
+        "headers"
+      ],
+      "controller_path": "preserve.controller.PreserveController.preserve",
+      "url_path": "/api/v1/preserveservice/preserve",
+      "req_method": "post"
+    },
+    {
+      "name": "assurance.service.AssuranceServiceImpl.getAllAssurances",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "assurance.controller.AssuranceController.getAllAssurances",
+      "url_path": "/api/v1/assuranceservice/assurances",
+      "req_method": "get"
+    },
+    {
+      "name": "assurance.service.AssuranceServiceImpl.getAllAssuranceTypes",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "assurance.controller.AssuranceController.getAllAssuranceType",
+      "url_path": "/api/v1/assuranceservice/assurances/types",
+      "req_method": "get"
+    },
+    {
+      "name": "assurance.service.AssuranceServiceImpl.deleteById",
+      "def_req": "UUID assuranceId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "assuranceId",
+        "headers"
+      ],
+      "controller_path": "assurance.controller.AssuranceController.deleteAssurance",
+      "url_path": "/api/v1/assuranceservice/assurances/assuranceid/{assuranceId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "assurance.service.AssuranceServiceImpl.deleteByOrderId",
+      "def_req": "UUID orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "assurance.controller.AssuranceController.deleteAssuranceByOrderId",
+      "url_path": "/api/v1/assuranceservice/assurances/orderid/{orderId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "assurance.service.AssuranceServiceImpl.modify",
+      "def_req": "String assuranceId, String orderId, int typeIndex, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "assuranceId",
+        "orderId",
+        "typeIndex",
+        "headers"
+      ],
+      "controller_path": "assurance.controller.AssuranceController.modifyAssurance",
+      "url_path": "/api/v1/assuranceservice/assurances/{assuranceId}/{orderId}/{typeIndex}",
+      "req_method": "patch"
+    },
+    {
+      "name": "assurance.service.AssuranceServiceImpl.create",
+      "def_req": "int typeIndex, String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "typeIndex",
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "assurance.controller.AssuranceController.createNewAssurance",
+      "url_path": "/api/v1/assuranceservice/assurances/{typeIndex}/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "assurance.service.AssuranceServiceImpl.findAssuranceById",
+      "def_req": "UUID id, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "id",
+        "headers"
+      ],
+      "controller_path": "assurance.controller.AssuranceController.getAssuranceById",
+      "url_path": "/api/v1/assuranceservice/assurances/assuranceid/{assuranceId}",
+      "req_method": "get"
+    },
+    {
+      "name": "assurance.service.AssuranceServiceImpl.findAssuranceByOrderId",
+      "def_req": "UUID orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "assurance.controller.AssuranceController.findAssuranceByOrderId",
+      "url_path": "/api/v1/assuranceservice/assurance/orderid/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "consignprice.service.ConsignPriceServiceImpl.getPriceByWeightAndRegion",
+      "def_req": "double weight, boolean isWithinRegion, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "weight",
+        "isWithinRegion",
+        "headers"
+      ],
+      "controller_path": "consignprice.controller.ConsignPriceController.getPriceByWeightAndRegion",
+      "url_path": "/api/v1/consignpriceservice/consignprice/{weight}/{isWithinRegion}",
+      "req_method": "get"
+    },
+    {
+      "name": "consignprice.service.ConsignPriceServiceImpl.queryPriceInformation",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "consignprice.controller.ConsignPriceController.getPriceInfo",
+      "url_path": "/api/v1/consignpriceservice/consignprice/price",
+      "req_method": "get"
+    },
+    {
+      "name": "consignprice.service.ConsignPriceServiceImpl.getPriceConfig",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "consignprice.controller.ConsignPriceController.getPriceConfig",
+      "url_path": "/api/v1/consignpriceservice/consignprice/config",
+      "req_method": "get"
+    },
+    {
+      "name": "consignprice.service.ConsignPriceServiceImpl.createAndModifyPrice",
+      "def_req": "ConsignPrice config, HttpHeaders headers\n\n\nclass ConsignPrice {\n    String id;\n    int index;\n    double initialWeight;\n    double initialPrice;\n    double withinPrice;\n    double beyondPrice;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "config",
+        "headers"
+      ],
+      "controller_path": "consignprice.controller.ConsignPriceController.modifyPriceConfig",
+      "url_path": "/api/v1/consignpriceservice/consignprice",
+      "req_method": "post"
+    },
+    {
+      "name": "execute.serivce.ExecuteServiceImpl.ticketExecute",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "execute.controller.ExecuteControlller.executeTicket",
+      "url_path": "/api/v1/executeservice/execute/execute/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "execute.serivce.ExecuteServiceImpl.ticketCollect",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "execute.controller.ExecuteControlller.collectTicket",
+      "url_path": "/api/v1/executeservice/execute/collected/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.getSoldTickets",
+      "def_req": "Seat seatRequest, HttpHeaders headers\n\n\nclass Seat {\n    String travelDate;\n    String trainNumber;\n    String startStation;\n    String destStation;\n    int seatType;\n    int totalNum;\n    List<String> stations;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "seatRequest",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.getTicketListByDateAndTripId",
+      "url_path": "/api/v1/orderOtherService/orderOther/tickets",
+      "req_method": "post"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.create",
+      "def_req": "Order order, HttpHeaders headers\n\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "order",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.createNewOrder",
+      "url_path": "/api/v1/orderOtherService/orderOther",
+      "req_method": "post"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.addNewOrder",
+      "def_req": "Order order, HttpHeaders headers\n\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "order",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.addcreateNewOrder",
+      "url_path": "/api/v1/orderOtherService/orderOther/admin",
+      "req_method": "post"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.queryOrders",
+      "def_req": "QueryInfo qi, String accountId, HttpHeaders headers\n\n\nclass QueryInfo {\n    String loginId;\n    String travelDateStart;\n    String travelDateEnd;\n    String boughtDateStart;\n    String boughtDateEnd;\n    int state;\n    boolean enableTravelDateQuery;\n    boolean enableBoughtDateQuery;\n    boolean enableStateQuery;\n}",
+      "def_resp": "Response<ArrayList<Order>>\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n}",
+      "src": null,
+      "argument_names": [
+        "qi",
+        "accountId",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.queryOrders",
+      "url_path": "/api/v1/orderOtherService/orderOther/query",
+      "req_method": "post"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.queryOrdersForRefresh",
+      "def_req": "QueryInfo qi, String accountId, HttpHeaders headers\n\n\nclass QueryInfo {\n    String loginId;\n    String travelDateStart;\n    String travelDateEnd;\n    String boughtDateStart;\n    String boughtDateEnd;\n    int state;\n    boolean enableTravelDateQuery;\n    boolean enableBoughtDateQuery;\n    boolean enableStateQuery;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "qi",
+        "accountId",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.queryOrdersForRefresh",
+      "url_path": "/api/v1/orderOtherService/orderOther/refresh",
+      "req_method": "post"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.queryAlreadySoldOrders",
+      "def_req": "Date travelDate, String trainNumber, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "travelDate",
+        "trainNumber",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.calculateSoldTicket",
+      "url_path": "/api/v1/orderOtherService/orderOther/{travelDate}/{trainNumber}",
+      "req_method": "get"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.getOrderPrice",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.getOrderPrice",
+      "url_path": "/api/v1/orderOtherService/orderOther/price/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.payOrder",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.payOrder",
+      "url_path": "/api/v1/orderOtherService/orderOther/orderPay/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.getOrderById",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.getOrderById",
+      "url_path": "/api/v1/orderOtherService/orderOther/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.modifyOrder",
+      "def_req": "String orderId, int status, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "status",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.modifyOrder",
+      "url_path": "/api/v1/orderOtherService/orderOther/status/{orderId}/{status}",
+      "req_method": "get"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.checkSecurityAboutOrder",
+      "def_req": "Date dateFrom, String accountId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "dateFrom",
+        "accountId",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.securityInfoCheck",
+      "url_path": "/api/v1/orderOtherService/orderOther/security/{checkDate}/{accountId}",
+      "req_method": "get"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.saveChanges",
+      "def_req": "Order order, HttpHeaders headers\n\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "order",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.saveOrderInfo",
+      "url_path": "/api/v1/orderOtherService/orderOther",
+      "req_method": "put"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.updateOrder",
+      "def_req": "Order order, HttpHeaders headers\n\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "order",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.updateOrder",
+      "url_path": "/api/v1/orderOtherService/orderOther/admin",
+      "req_method": "put"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.deleteOrder",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.deleteOrder",
+      "url_path": "/api/v1/orderOtherService/orderOther/{orderId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "other.service.OrderOtherServiceImpl.getAllOrders",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "other.controller.OrderOtherController.findAllOrder",
+      "url_path": "/api/v1/orderOtherService/orderOther",
+      "req_method": "get"
+    },
+    {
+      "name": "admintravel.service.AdminTravelServiceImpl.getAllTravels",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "admintravel.controller.AdminTravelController.getAllTravels",
+      "url_path": "/api/v1/admintravelservice/admintravel",
+      "req_method": "get"
+    },
+    {
+      "name": "admintravel.service.AdminTravelServiceImpl.addTravel",
+      "def_req": "TravelInfo request, HttpHeaders headers\n\n\nclass TravelInfo {\n    String loginId;\n    String tripId;\n    String trainTypeName;\n    String routeId;\n    String startStationName;\n    String stationsName;\n    String terminalStationName;\n    String startTime;\n    String endTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "request",
+        "headers"
+      ],
+      "controller_path": "admintravel.controller.AdminTravelController.addTravel",
+      "url_path": "/api/v1/admintravelservice/admintravel",
+      "req_method": "post"
+    },
+    {
+      "name": "admintravel.service.AdminTravelServiceImpl.updateTravel",
+      "def_req": "TravelInfo request, HttpHeaders headers\n\n\nclass TravelInfo {\n    String loginId;\n    String tripId;\n    String trainTypeName;\n    String routeId;\n    String startStationName;\n    String stationsName;\n    String terminalStationName;\n    String startTime;\n    String endTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "request",
+        "headers"
+      ],
+      "controller_path": "admintravel.controller.AdminTravelController.updateTravel",
+      "url_path": "/api/v1/admintravelservice/admintravel",
+      "req_method": "put"
+    },
+    {
+      "name": "admintravel.service.AdminTravelServiceImpl.deleteTravel",
+      "def_req": "String tripId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "tripId",
+        "headers"
+      ],
+      "controller_path": "admintravel.controller.AdminTravelController.deleteTravel",
+      "url_path": "/api/v1/admintravelservice/admintravel/{tripId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "price.service.PriceServiceImpl.findByRouteIdAndTrainType",
+      "def_req": "String routeId, String trainType, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "routeId",
+        "trainType",
+        "headers"
+      ],
+      "controller_path": "price.controller.PriceController.query",
+      "url_path": "/api/v1/priceservice/prices/{routeId}/{trainType}",
+      "req_method": "get"
+    },
+    {
+      "name": "price.service.PriceServiceImpl.findByRouteIdsAndTrainTypes",
+      "def_req": "List<String> ridsAndTts, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "ridsAndTts",
+        "headers"
+      ],
+      "controller_path": "price.controller.PriceController.query",
+      "url_path": "/api/v1/priceservice/prices/byRouteIdsAndTrainTypes",
+      "req_method": "post"
+    },
+    {
+      "name": "price.service.PriceServiceImpl.findAllPriceConfig",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "price.controller.PriceController.queryAll",
+      "url_path": "/api/v1/priceservice/prices",
+      "req_method": "get"
+    },
+    {
+      "name": "price.service.PriceServiceImpl.createNewPriceConfig",
+      "def_req": "PriceConfig createAndModifyPriceConfig, HttpHeaders headers\n\n\nclass PriceConfig {\n    String id;\n    String trainType;\n    String routeId;\n    double basicPriceRate;\n    double firstClassPriceRate;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "createAndModifyPriceConfig",
+        "headers"
+      ],
+      "controller_path": "price.controller.PriceController.create",
+      "url_path": "/api/v1/priceservice/prices",
+      "req_method": "post"
+    },
+    {
+      "name": "price.service.PriceServiceImpl.deletePriceConfig",
+      "def_req": "String pcId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "pcId",
+        "headers"
+      ],
+      "controller_path": "price.controller.PriceController.delete",
+      "url_path": "/api/v1/priceservice/prices/{pricesId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "price.service.PriceServiceImpl.updatePriceConfig",
+      "def_req": "PriceConfig c, HttpHeaders headers\n\n\nclass PriceConfig {\n    String id;\n    String trainType;\n    String routeId;\n    double basicPriceRate;\n    double firstClassPriceRate;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "c",
+        "headers"
+      ],
+      "controller_path": "price.controller.PriceController.update",
+      "url_path": "/api/v1/priceservice/prices",
+      "req_method": "put"
+    },
+    {
+      "name": "adminuser.service.AdminUserServiceImpl.getAllUsers",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "adminuser.controller.AdminUserController.getAllUsers",
+      "url_path": "/api/v1/adminuserservice/users",
+      "req_method": "get"
+    },
+    {
+      "name": "adminuser.service.AdminUserServiceImpl.updateUser",
+      "def_req": "UserDto userDto, HttpHeaders headers\n\n\nclass UserDto {\n    String userId;\n    String userName;\n    String password;\n    int gender;\n    int documentType;\n    String documentNum;\n    String email;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "userDto",
+        "headers"
+      ],
+      "controller_path": "adminuser.controller.AdminUserController.updateUser",
+      "url_path": "/api/v1/adminuserservice/users",
+      "req_method": "put"
+    },
+    {
+      "name": "adminuser.service.AdminUserServiceImpl.addUser",
+      "def_req": "UserDto userDto, HttpHeaders headers\n\n\nclass UserDto {\n    String userId;\n    String userName;\n    String password;\n    int gender;\n    int documentType;\n    String documentNum;\n    String email;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "userDto",
+        "headers"
+      ],
+      "controller_path": "adminuser.controller.AdminUserController.addUser",
+      "url_path": "/api/v1/adminuserservice/users",
+      "req_method": "post"
+    },
+    {
+      "name": "adminuser.service.AdminUserServiceImpl.deleteUser",
+      "def_req": "String userId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "userId",
+        "headers"
+      ],
+      "controller_path": "adminuser.controller.AdminUserController.deleteUser",
+      "url_path": "/api/v1/adminuserservice/users/{userId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "foodsearch.service.FoodServiceImpl.findAllFoodOrder",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "foodsearch.controller.FoodController.findAllFoodOrder",
+      "url_path": "/api/v1/foodservice/orders",
+      "req_method": "get"
+    },
+    {
+      "name": "foodsearch.service.FoodServiceImpl.createFoodOrder",
+      "def_req": "FoodOrder addFoodOrder, HttpHeaders headers\n\n\nclass FoodOrder {\n    String id;\n    String orderId;\n    int foodType;\n    String stationName;\n    String storeName;\n    String foodName;\n    double price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "addFoodOrder",
+        "headers"
+      ],
+      "controller_path": "foodsearch.controller.FoodController.createFoodOrder",
+      "url_path": "/api/v1/foodservice/orders",
+      "req_method": "post"
+    },
+    {
+      "name": "foodsearch.service.FoodServiceImpl.createFoodOrdersInBatch",
+      "def_req": "List<FoodOrder> orders, HttpHeaders headers\n\n\nclass FoodOrder {\n    String id;\n    String orderId;\n    int foodType;\n    String stationName;\n    String storeName;\n    String foodName;\n    double price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orders",
+        "headers"
+      ],
+      "controller_path": "foodsearch.controller.FoodController.createFoodBatches",
+      "url_path": "/api/v1/foodservice/createOrderBatch",
+      "req_method": "post"
+    },
+    {
+      "name": "foodsearch.service.FoodServiceImpl.updateFoodOrder",
+      "def_req": "FoodOrder updateFoodOrder, HttpHeaders headers\n\n\nclass FoodOrder {\n    String id;\n    String orderId;\n    int foodType;\n    String stationName;\n    String storeName;\n    String foodName;\n    double price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "updateFoodOrder",
+        "headers"
+      ],
+      "controller_path": "foodsearch.controller.FoodController.updateFoodOrder",
+      "url_path": "/api/v1/foodservice/orders",
+      "req_method": "put"
+    },
+    {
+      "name": "foodsearch.service.FoodServiceImpl.deleteFoodOrder",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "foodsearch.controller.FoodController.deleteFoodOrder",
+      "url_path": "/api/v1/foodservice/orders/{orderId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "foodsearch.service.FoodServiceImpl.findByOrderId",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "foodsearch.controller.FoodController.findFoodOrderByOrderId",
+      "url_path": "/api/v1/foodservice/orders/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "foodsearch.service.FoodServiceImpl.getAllFood",
+      "def_req": "String date, String startStation, String endStation, String tripId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "date",
+        "startStation",
+        "endStation",
+        "tripId",
+        "headers"
+      ],
+      "controller_path": "foodsearch.controller.FoodController.getAllFood",
+      "url_path": "/api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId}",
+      "req_method": "get"
+    },
+    {
+      "name": "seat.service.SeatServiceImpl.distributeSeat",
+      "def_req": "Seat seatRequest, HttpHeaders headers\n\n\nclass Seat {\n    String travelDate;\n    String trainNumber;\n    String startStation;\n    String destStation;\n    int seatType;\n    int totalNum;\n    List<String> stations;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "seatRequest",
+        "headers"
+      ],
+      "controller_path": "seat.controller.SeatController.create",
+      "url_path": "/api/v1/seatservice/seats",
+      "req_method": "post"
+    },
+    {
+      "name": "seat.service.SeatServiceImpl.getLeftTicketOfInterval",
+      "def_req": "Seat seatRequest, HttpHeaders headers\n\n\nclass Seat {\n    String travelDate;\n    String trainNumber;\n    String startStation;\n    String destStation;\n    int seatType;\n    int totalNum;\n    List<String> stations;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "seatRequest",
+        "headers"
+      ],
+      "controller_path": "seat.controller.SeatController.getLeftTicketOfInterval",
+      "url_path": "/api/v1/seatservice/seats/left_tickets",
+      "req_method": "post"
+    },
+    {
+      "name": "cancel.service.CancelServiceImpl.calculateRefund",
+      "def_req": "String orderId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "headers"
+      ],
+      "controller_path": "cancel.controller.CancelController.calculate",
+      "url_path": "/api/v1/cancelservice/cancel/refound/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "cancel.service.CancelServiceImpl.cancelOrder",
+      "def_req": "String orderId, String loginId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "loginId",
+        "headers"
+      ],
+      "controller_path": "cancel.controller.CancelController.cancelTicket",
+      "url_path": "/api/v1/cancelservice/cancel/{orderId}/{loginId}",
+      "req_method": "get"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.getAllContacts",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.getAllContacts",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/contacts",
+      "req_method": "get"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.deleteContact",
+      "def_req": "String contactsId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "contactsId",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.deleteContacts",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/contacts/{contactsId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.modifyContact",
+      "def_req": "Contacts mci, HttpHeaders headers\n\n\nclass Contacts {\n    UUID id;\n    UUID accountId;\n    String name;\n    int documentType;\n    String documentNumber;\n    String phoneNumber;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "mci",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.modifyContacts",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/contacts",
+      "req_method": "put"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.addContact",
+      "def_req": "Contacts c, HttpHeaders headers\n\n\nclass Contacts {\n    UUID id;\n    UUID accountId;\n    String name;\n    int documentType;\n    String documentNumber;\n    String phoneNumber;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "c",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.addContacts",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/contacts",
+      "req_method": "post"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.getAllStations",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.getAllStations",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/stations",
+      "req_method": "get"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.deleteStation",
+      "def_req": "String id, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "id",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.deleteStation",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/stations/{id}",
+      "req_method": "delete"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.modifyStation",
+      "def_req": "Station s, HttpHeaders headers\n\n\nclass Station {\n    String id;\n    String name;\n    int stayTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "s",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.modifyStation",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/stations",
+      "req_method": "put"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.addStation",
+      "def_req": "Station s, HttpHeaders headers\n\n\nclass Station {\n    String id;\n    String name;\n    int stayTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "s",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.addStation",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/stations",
+      "req_method": "post"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.getAllTrains",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.getAllTrains",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/trains",
+      "req_method": "get"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.deleteTrain",
+      "def_req": "String id, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "id",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.deleteTrain",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/trains/{id}",
+      "req_method": "delete"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.modifyTrain",
+      "def_req": "TrainType t, HttpHeaders headers\n\n\nclass TrainType {\n    String id;\n    String name;\n    int economyClass;\n    int confortClass;\n    int averageSpeed;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "t",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.modifyTrain",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/trains",
+      "req_method": "put"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.addTrain",
+      "def_req": "TrainType t, HttpHeaders headers\n\n\nclass TrainType {\n    String id;\n    String name;\n    int economyClass;\n    int confortClass;\n    int averageSpeed;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "t",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.addTrain",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/trains",
+      "req_method": "post"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.getAllConfigs",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.getAllConfigs",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/configs",
+      "req_method": "get"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.deleteConfig",
+      "def_req": "String name, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "name",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.deleteConfig",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/configs/{name}",
+      "req_method": "delete"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.modifyConfig",
+      "def_req": "Config c, HttpHeaders headers\n\n\nclass Config {\n    String name;\n    String value;\n    String description;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "c",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.modifyConfig",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/configs",
+      "req_method": "put"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.addConfig",
+      "def_req": "Config c, HttpHeaders headers\n\n\nclass Config {\n    String name;\n    String value;\n    String description;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "c",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.addConfig",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/configs",
+      "req_method": "post"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.getAllPrices",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.getAllPrices",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/prices",
+      "req_method": "get"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.deletePrice",
+      "def_req": "String pricesId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "pricesId",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.deletePrice",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/prices/{pricesId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.modifyPrice",
+      "def_req": "PriceInfo pi, HttpHeaders headers\n\n\nclass PriceInfo {\n    String id;\n    String trainType;\n    String routeId;\n    double basicPriceRate;\n    double firstClassPriceRate;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "pi",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.modifyPrice",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/prices",
+      "req_method": "put"
+    },
+    {
+      "name": "adminbasic.service.AdminBasicInfoServiceImpl.addPrice",
+      "def_req": "PriceInfo pi, HttpHeaders headers\n\n\nclass PriceInfo {\n    String id;\n    String trainType;\n    String routeId;\n    double basicPriceRate;\n    double firstClassPriceRate;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "pi",
+        "headers"
+      ],
+      "controller_path": "adminbasic.controller.AdminBasicInfoController.addPrice",
+      "url_path": "/api/v1/adminbasicservice/adminbasic/prices",
+      "req_method": "post"
+    },
+    {
+      "name": "notification.service.NotificationServiceImpl.preserveSuccess",
+      "def_req": "NotifyInfo info, HttpHeaders headers\n\n\nclass NotifyInfo {\n    String id;\n    Boolean sendStatus;\n    String email;\n    String orderNumber;\n    String username;\n    String startPlace;\n    String endPlace;\n    String startTime;\n    String date;\n    String seatClass;\n    String seatNumber;\n    String price;\n}",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "notification.controller.NotificationController.test_send_mail",
+      "url_path": "/api/v1/notifyservice/test_send_mail",
+      "req_method": "get"
+    },
+    {
+      "name": "notification.service.NotificationServiceImpl.preserveSuccess",
+      "def_req": "NotifyInfo info, HttpHeaders headers\n\n\nclass NotifyInfo {\n    String id;\n    Boolean sendStatus;\n    String email;\n    String orderNumber;\n    String username;\n    String startPlace;\n    String endPlace;\n    String startTime;\n    String date;\n    String seatClass;\n    String seatNumber;\n    String price;\n}",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "notification.controller.NotificationController.preserve_success",
+      "url_path": "/api/v1/notifyservice/notification/preserve_success",
+      "req_method": "post"
+    },
+    {
+      "name": "notification.service.NotificationServiceImpl.orderCreateSuccess",
+      "def_req": "NotifyInfo info, HttpHeaders headers\n\n\nclass NotifyInfo {\n    String id;\n    Boolean sendStatus;\n    String email;\n    String orderNumber;\n    String username;\n    String startPlace;\n    String endPlace;\n    String startTime;\n    String date;\n    String seatClass;\n    String seatNumber;\n    String price;\n}",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "notification.controller.NotificationController.order_create_success",
+      "url_path": "/api/v1/notifyservice/notification/order_create_success",
+      "req_method": "post"
+    },
+    {
+      "name": "notification.service.NotificationServiceImpl.orderChangedSuccess",
+      "def_req": "NotifyInfo info, HttpHeaders headers\n\n\nclass NotifyInfo {\n    String id;\n    Boolean sendStatus;\n    String email;\n    String orderNumber;\n    String username;\n    String startPlace;\n    String endPlace;\n    String startTime;\n    String date;\n    String seatClass;\n    String seatNumber;\n    String price;\n}",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "notification.controller.NotificationController.order_changed_success",
+      "url_path": "/api/v1/notifyservice/notification/order_changed_success",
+      "req_method": "post"
+    },
+    {
+      "name": "notification.service.NotificationServiceImpl.orderCancelSuccess",
+      "def_req": "NotifyInfo info, HttpHeaders headers\n\n\nclass NotifyInfo {\n    String id;\n    Boolean sendStatus;\n    String email;\n    String orderNumber;\n    String username;\n    String startPlace;\n    String endPlace;\n    String startTime;\n    String date;\n    String seatClass;\n    String seatNumber;\n    String price;\n}",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "info",
+        "headers"
+      ],
+      "controller_path": "notification.controller.NotificationController.order_cancel_success",
+      "url_path": "/api/v1/notifyservice/notification/order_cancel_success",
+      "req_method": "post"
+    },
+    {
+      "name": "food_delivery.service.FoodDeliveryServiceImpl.createFoodDeliveryOrder",
+      "def_req": "FoodDeliveryOrder fd, HttpHeaders headers\n\n\nclass FoodDeliveryOrder {\n    String id;\n    String stationFoodStoreId;\n    List<Food> foodList;\n    String tripId;\n    int seatNo;\n    String createdTime;\n    String deliveryTime;\n    double deliveryFee;\n}\n\nclass Food {\n    String foodName;\n    double price;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "fd",
+        "headers"
+      ],
+      "controller_path": "food_delivery.controller.FoodDeliveryController.createFoodDeliveryOrder",
+      "url_path": "/api/v1/fooddeliveryservice/orders",
+      "req_method": "post"
+    },
+    {
+      "name": "food_delivery.service.FoodDeliveryServiceImpl.deleteFoodDeliveryOrder",
+      "def_req": "String id, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "id",
+        "headers"
+      ],
+      "controller_path": "food_delivery.controller.FoodDeliveryController.deleteFoodDeliveryOrder",
+      "url_path": "/api/v1/fooddeliveryservice/orders/d/{orderId}",
+      "req_method": "delete"
+    },
+    {
+      "name": "food_delivery.service.FoodDeliveryServiceImpl.getFoodDeliveryOrderById",
+      "def_req": "String id, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "id",
+        "headers"
+      ],
+      "controller_path": "food_delivery.controller.FoodDeliveryController.getFoodDeliveryOrderById",
+      "url_path": "/api/v1/fooddeliveryservice/orders/{orderId}",
+      "req_method": "get"
+    },
+    {
+      "name": "food_delivery.service.FoodDeliveryServiceImpl.getAllFoodDeliveryOrders",
+      "def_req": "HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "headers"
+      ],
+      "controller_path": "food_delivery.controller.FoodDeliveryController.getAllFoodDeliveryOrders",
+      "url_path": "/api/v1/fooddeliveryservice/orders/all",
+      "req_method": "get"
+    },
+    {
+      "name": "food_delivery.service.FoodDeliveryServiceImpl.getFoodDeliveryOrderByStoreId",
+      "def_req": "String storeId, HttpHeaders headers\n",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "storeId",
+        "headers"
+      ],
+      "controller_path": "food_delivery.controller.FoodDeliveryController.getFoodDeliveryOrderByStoreId",
+      "url_path": "/api/v1/fooddeliveryservice/orders/store/{storeId}",
+      "req_method": "get"
+    },
+    {
+      "name": "food_delivery.service.FoodDeliveryServiceImpl.updateTripId",
+      "def_req": "TripOrderInfo tripInfo, HttpHeaders headers\n\n\nclass TripOrderInfo {\n    String orderId;\n    String tripId;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "tripInfo",
+        "headers"
+      ],
+      "controller_path": "food_delivery.controller.FoodDeliveryController.updateTripId",
+      "url_path": "/api/v1/fooddeliveryservice/orders/tripid",
+      "req_method": "put"
+    },
+    {
+      "name": "food_delivery.service.FoodDeliveryServiceImpl.updateSeatNo",
+      "def_req": "SeatInfo seatInfo, HttpHeaders headers\n\n\nclass SeatInfo {\n    String orderId;\n    int seatNo;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "seatInfo",
+        "headers"
+      ],
+      "controller_path": "food_delivery.controller.FoodDeliveryController.updateSeatNo",
+      "url_path": "/api/v1/fooddeliveryservice/orders/seatno",
+      "req_method": "put"
+    },
+    {
+      "name": "food_delivery.service.FoodDeliveryServiceImpl.updateDeliveryTime",
+      "def_req": "DeliveryInfo deliveryInfo, HttpHeaders headers\n\n\nclass DeliveryInfo {\n    String orderId;\n    String deliveryTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "deliveryInfo",
+        "headers"
+      ],
+      "controller_path": "food_delivery.controller.FoodDeliveryController.updateDeliveryTime",
+      "url_path": "/api/v1/fooddeliveryservice/orders/dtime",
+      "req_method": "put"
+    },
+    {
+      "name": "rebook.service.RebookServiceImpl.updateOrder",
+      "def_req": "Order order, RebookInfo info, TripAllDetail gtdr, String ticketPrice, HttpHeaders httpHeaders\n\n\nclass RebookInfo {\n    String loginId;\n    String orderId;\n    String oldTripId;\n    String tripId;\n    int seatType;\n    String date;\n}\n\nclass Order {\n    String id;\n    String boughtDate;\n    String travelDate;\n    String travelTime;\n    String accountId;\n    String contactsName;\n    int documentType;\n    String contactsDocumentNumber;\n    String trainNumber;\n    int coachNumber;\n    int seatClass;\n    String seatNumber;\n    String from;\n    String to;\n    int status;\n    String price;\n    String differenceMoney;\n}\n\nclass TripAllDetail {\n    boolean status;\n    String message;\n    TripResponse tripResponse;\n    Trip trip;\n}\n\nclass TripResponse {\n    TripId tripId;\n    String trainTypeName;\n    String startStation;\n    String terminalStation;\n    String startTime;\n    String endTime;\n    int economyClass;\n    int confortClass;\n    String priceForEconomyClass;\n    String priceForConfortClass;\n}\n\nclass TripId {\n    Type type;\n    String number;\n}\n\nenum Type { G, D, Z, T, K }\n\nclass Trip {\n    String id;\n    TripId tripId;\n    String trainTypeName;\n    String routeId;\n    String startStationName;\n    String stationsName;\n    String terminalStationName;\n    String startTime;\n    String endTime;\n}",
+      "def_resp": "Response\n\n\nclass Response {\n    Integer status;\n    String msg;\n    Object data;\n}",
+      "src": null,
+      "argument_names": [
+        "order",
+        "info",
+        "gtdr",
+        "ticketPrice",
+        "httpHeaders"
+      ],
+      "controller_path": "rebook.service.RebookServiceImpl.updateOrder",
+      "url_path": "/api/v1/rebookservice/updateorder",
+      "req_method": "post"
+    },
+    {
+      "name": "rebook.service.RebookServiceImpl.payDifferentMoney",
+      "def_req": "String orderId, String tripId, String userId, String money, HttpHeaders httpHeaders\n",
+      "def_resp": "boolean\n",
+      "src": null,
+      "argument_names": [
+        "orderId",
+        "tripId",
+        "userId",
+        "money",
+        "httpHeaders"
+      ],
+      "controller_path": "rebook.service.RebookServiceImpl.payDifferentMoney",
+      "url_path": "/api/v1/rebookservice/paydifferentmoney",
+      "req_method": "post"
+    }
+  ],
+  "relations_data": [],
+  "relations_control": []
+}

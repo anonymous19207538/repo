@@ -1,0 +1,7 @@
+*.zst
+*.jsonl
+*.zstd
+*.json
+*.txt
+*.csv
+*.npz
